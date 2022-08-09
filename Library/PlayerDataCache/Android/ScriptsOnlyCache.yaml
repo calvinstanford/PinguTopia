@@ -52,10 +52,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.SpriteState
-  methodsToPreserve:
-  - assembly: Assembly-CSharp
-    fullTypeName: CastleHandler
-    methodName: CenterCamera
+  methodsToPreserve: []
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -89,25 +86,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 654}
     - Class: 114
-      Script: {instanceID: 1592}
+      Script: {instanceID: 1590}
     - Class: 114
-      Script: {instanceID: 2026}
+      Script: {instanceID: 2024}
     - Class: 114
-      Script: {instanceID: 2822}
+      Script: {instanceID: 2820}
     - Class: 114
-      Script: {instanceID: 3082}
+      Script: {instanceID: 3080}
     - Class: 114
-      Script: {instanceID: 3440}
+      Script: {instanceID: 3438}
     - Class: 114
-      Script: {instanceID: 3578}
+      Script: {instanceID: 3576}
     - Class: 114
-      Script: {instanceID: 6306}
+      Script: {instanceID: 6304}
     - Class: 114
-      Script: {instanceID: 6700}
+      Script: {instanceID: 6698}
     - Class: 114
-      Script: {instanceID: 7318}
+      Script: {instanceID: 7316}
     - Class: 114
-      Script: {instanceID: 8820}
+      Script: {instanceID: 8818}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -197,7 +194,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 218048bd93e908746781901d78cf0f9b
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CastleHandler
@@ -407,7 +404,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDownMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 714924315c528ec3ac78c368e4fe33e8
+      Hash: 92bba04ebbb1f12983ccc55cbca4af6b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PanZoom
@@ -1080,4 +1077,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Admin/Unity/PinguTopia/pingutopia/pingutopia.apk
+  playerPath: C:/Users/Admin/Unity/PinguTopia/PinguTopia/pingutopia.apk

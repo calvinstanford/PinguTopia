@@ -319,9 +319,9 @@
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.VisualScripting.Flow.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.VisualScripting.State.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/UnityEngine.UI.ref.dll"
-"Assets/RandomMovement.cs"
 "Assets/Scripts/CastleHandler.cs"
 "Assets/Scripts/PanZoom.cs"
+"Assets/Scripts/RandomMovement.cs"
 -langversion:9.0
 
 /deterministic

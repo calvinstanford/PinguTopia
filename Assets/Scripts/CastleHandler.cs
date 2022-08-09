@@ -5,21 +5,22 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class CastleHandler : MonoBehaviour
 {
-   // public GameObject button; 
+   /*
+   This script and function is attached to the Igloo game objects button component.
+   It centers the camera on the object when user taps it.
+   */ 
 
 public Camera cam;
     public void CenterCamera(){
      
-       Debug.Log("ZZZZZZZZZZZZZZZ");
+       Debug.Log("CenterCam");
        
        Button but  = GetComponent<Button>();
        
-        print(but.transform.position);
-       
+       Debug.Log(but.transform.position); 
        Vector3 pos = but.transform.position;
-
        pos.z = -10f;
-
-        cam.transform.position = pos;
+       
+       cam.transform.position = pos;
     }
 }

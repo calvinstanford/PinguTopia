@@ -38,7 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CastleHandler.cs" />
      <Compile Include="Assets\Scripts\PanZoom.cs" />
-     <Compile Include="Assets\RandomMovement.cs" />
+     <Compile Include="Assets\Scripts\RandomMovement.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

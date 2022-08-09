@@ -12,13 +12,17 @@ Improvements to be made:
 
  public class PanZoom : MonoBehaviour
  {
-            Vector3 touchStart;
+    private Vector3 touchStart;
     public float zoomOutMin = 1;
     public float zoomOutMax = 40;
-	
-    public Vector3 fingerPos;
-    public float speed = 0.9F;
-     void Update() {
+ 
+    /*void Update: Update function handles camera movement with 
+                   one finger and calls the zoom function when 
+                   two fingers are touching the screen.
+    
+    
+    */
+    void Update() {
          if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved) {
              Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
              transform.Translate(-touchDeltaPosition.x * Time.deltaTime, -touchDeltaPosition.y * Time.deltaTime, 0);
@@ -48,18 +52,15 @@ Improvements to be made:
         zoom(Input.GetAxis("Mouse ScrollWheel"));
 	}
 
-    void zoom(float increment){
+
+    /*
+    public void zoom: zoom function to be called in Update.
+    */
+    public void zoom(float increment){
         Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomOutMin, zoomOutMax);
     }
 
 
-    public void center(){
-        print("xXXXxXXXXXXXXXxxxxxx");
-        
-        Vector3 pos = fingerPos;
- pos.z = -10;
- print(pos);
- Vector3 realWorldPos = Camera.main.ScreenToWorldPoint(pos);
-     }
+   
  }
- 
+  
