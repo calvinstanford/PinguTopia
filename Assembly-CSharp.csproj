@@ -38,6 +38,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CastleHandler.cs" />
      <Compile Include="Assets\Scripts\PanZoom.cs" />
+     <Compile Include="Assets\Scripts\Penguin.cs" />
+     <Compile Include="Assets\Scripts\FishingHole.cs" />
      <Compile Include="Assets\Scripts\RandomMovement.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -278,6 +280,9 @@
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
         <HintPath>C:\Users\Admin\cmon\PinguTopia\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+        <HintPath>C:\Users\Admin\cmon\PinguTopia\Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
         <HintPath>C:\Users\Admin\cmon\PinguTopia\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
@@ -800,6 +805,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{5049147b-8aff-02bb-0364-13a57fbf81f5}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{a35d7411-6457-c374-3a0f-5ebed1707cbe}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{fddc127f-3227-23f4-4209-e72945d8ed99}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
