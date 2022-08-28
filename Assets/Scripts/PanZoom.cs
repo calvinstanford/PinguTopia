@@ -24,6 +24,7 @@ Improvements to be made:
     */
     void Update() {
          if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved) {
+             Debug.Log("hahahaha");
              Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
              transform.Translate(-touchDeltaPosition.x * Time.deltaTime, -touchDeltaPosition.y * Time.deltaTime, 0);
          }
@@ -31,8 +32,10 @@ Improvements to be made:
    
         if(Input.GetMouseButtonDown(0)){
             touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Debug.Log("hahahaha2");
         }
         if(Input.touchCount == 2){
+            Debug.Log("hahahaha3");
             Touch touchZero = Input.GetTouch(0);
             Touch touchOne = Input.GetTouch(1);
 
@@ -46,18 +49,19 @@ Improvements to be made:
 
             zoom(difference * 0.01f);
         }else if(Input.GetMouseButton(0)){
+           
             Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Camera.main.transform.position += direction;
         }
         zoom(Input.GetAxis("Mouse ScrollWheel"));
 	}
 
-
     /*
     public void zoom: zoom function to be called in Update.
     */
     public void zoom(float increment){
         Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomOutMin, zoomOutMax);
+    
     }
 
 

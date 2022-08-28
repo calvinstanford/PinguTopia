@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 /*
 Random movement class for the NPCs to wander around map.
+@author Sasha Buskin
 */
 public class RandomMovement : MonoBehaviour
 { 
