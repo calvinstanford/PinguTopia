@@ -8,6 +8,7 @@ public class CastleHandler : MonoBehaviour
    /*
    This script and function is attached to the Igloo game objects button component.
    It centers the camera on the object when user taps it.
+   @author Sasha Buskin
    */ 
 
 public Camera cam;
