@@ -9,7 +9,8 @@ public class IglooPopup : MonoBehaviour
     IglooPopup class: Used for functions of the Empire Popup
                       that appears when the main Igloo is 
                       clicked. The penguin population stats
-                      on the empire popup are updated in the 
+                      on the empire popup and the penguin number
+                      in the corner of the UI are updated in the 
                       Update function. This class also contains 
                       functions popup() & popdown() that are 
                       uset to alter bool parameters in the 
@@ -21,6 +22,7 @@ public class IglooPopup : MonoBehaviour
     */
     public Animator animator;
     public TextMeshProUGUI penguCount;
+    public TextMeshProUGUI cornerPengCount;
     public EmpireObj empire;
     void Start()
     {
@@ -32,6 +34,7 @@ public class IglooPopup : MonoBehaviour
     {
         //print(empire.pinguNum);
         penguCount.text = empire.pinguNum;
+        cornerPengCount.text = empire.pinguNum;
     }
 
 //   popup() & popdown() functions used in onClicks and raycasts 
