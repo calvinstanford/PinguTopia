@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pond
   - igloo
+  - notibox
   layers:
   - Default
   - TransparentFX

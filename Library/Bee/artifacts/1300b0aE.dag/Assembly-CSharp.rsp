@@ -384,6 +384,7 @@
 "Assets/Scripts/FishingHole.cs"
 "Assets/Scripts/igloo.cs"
 "Assets/Scripts/IglooPopup.cs"
+"Assets/Scripts/NotiboxCast.cs"
 "Assets/Scripts/PanZoom.cs"
 "Assets/Scripts/Penguin.cs"
 "Assets/Scripts/RandomMovement.cs"

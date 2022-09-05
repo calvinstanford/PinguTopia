@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class igloo : MonoBehaviour
 {
    /*
-   igloo class attached to the igloo object.
+   Igloo class attached to the igloo object.
     
    A Raycast is implemented in the Update() function
    to check if the igloo object has been tapped.
@@ -32,7 +32,6 @@ public class igloo : MonoBehaviour
 
     void Update()
     {
-
         if(Input.GetMouseButtonDown(0))
              {
 
