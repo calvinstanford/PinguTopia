@@ -3,11 +3,11 @@
 
 /*
 This script is attached to the Main camera in the main game, 
-it allows the user to pan over the map by swiping their touchscreen.
+it allows the user to pan over the map by swiping their touchscreen 
+if they are not swiping the notificationBox. 
+Also had pinch to zoom in/out function.
 
-Improvements to be made:
--Add pinch to zoom in/out.
--Speed adjustment.
+@author Sasha Buskin
 */
 
  public class PanZoom : MonoBehaviour
@@ -16,6 +16,7 @@ Improvements to be made:
     public float zoomOutMin = 1;
     public float zoomOutMax = 40;
  
+ public NotiboxCast notiBoxCast;
     /*void Update: Update function handles camera movement with 
                    one finger and calls the zoom function when 
                    two fingers are touching the screen.
@@ -23,14 +24,9 @@ Improvements to be made:
     
     */
     void Update() {
-         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved) {
-             Debug.Log("hahahaha");
-             Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-             transform.Translate(-touchDeltaPosition.x * Time.deltaTime, -touchDeltaPosition.y * Time.deltaTime, 0);
-         }
-
-   
-        if(Input.GetMouseButtonDown(0)){
+     
+        if(Input.GetMouseButtonDown(0) && !notiBoxCast.notiBoxDetected(Input.GetMouseButton(0))){
+            
             touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Debug.Log("hahahaha2");
         }
@@ -49,9 +45,11 @@ Improvements to be made:
 
             zoom(difference * 0.01f);
         }else if(Input.GetMouseButton(0)){
+            if(!notiBoxCast.notiBoxDetected(Input.GetMouseButton(0))){
            
             Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Camera.main.transform.position += direction;
+        }
         }
         zoom(Input.GetAxis("Mouse ScrollWheel"));
 	}

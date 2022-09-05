@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - FishCounter
     - FishingHole
     - IglooPopup
+    - NotiboxCast
     - PanZoom
     - Penguin
     - RandomMovement
@@ -45,6 +46,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateEditor
     - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
@@ -59,6 +61,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
   serializedClasses:
     Unity.TextMeshPro:
@@ -92,6 +97,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
+    - UnityEngine.UI.ScrollRect/ScrollRectEvent
+    - UnityEngine.UI.Scrollbar/ScrollEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
   - assembly: Assembly-CSharp
@@ -164,25 +171,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3180}
     - Class: 114
-      Script: {instanceID: 3554}
+      Script: {instanceID: 3400}
     - Class: 114
-      Script: {instanceID: 3696}
+      Script: {instanceID: 3556}
     - Class: 114
-      Script: {instanceID: 4658}
+      Script: {instanceID: 3698}
     - Class: 114
-      Script: {instanceID: 4738}
+      Script: {instanceID: 4568}
     - Class: 114
-      Script: {instanceID: 4790}
+      Script: {instanceID: 4660}
     - Class: 114
-      Script: {instanceID: 4876}
+      Script: {instanceID: 4740}
     - Class: 114
-      Script: {instanceID: 5218}
+      Script: {instanceID: 4792}
     - Class: 114
-      Script: {instanceID: 5996}
+      Script: {instanceID: 4878}
     - Class: 114
-      Script: {instanceID: 6014}
+      Script: {instanceID: 5220}
     - Class: 114
-      Script: {instanceID: 6200}
+      Script: {instanceID: 5998}
+    - Class: 114
+      Script: {instanceID: 6016}
+    - Class: 114
+      Script: {instanceID: 6202}
     - Class: 114
       Script: {instanceID: 6558}
     - Class: 114
@@ -194,11 +205,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7618}
     - Class: 114
+      Script: {instanceID: 7630}
+    - Class: 114
       Script: {instanceID: 8702}
+    - Class: 114
+      Script: {instanceID: 9020}
     - Class: 114
       Script: {instanceID: 9176}
     - Class: 114
-      Script: {instanceID: 86150}
+      Script: {instanceID: 75048}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -558,6 +573,12 @@ ScriptsOnlyBuild:
     className: UnityOnDropdownValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 26973d987aa31ab2e9492982bc543e93
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EmpireObj
+  - hash:
+      serializedVersion: 2
       Hash: 0784d4fd5b93bd75440d01eb2fac4233
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -600,7 +621,7 @@ ScriptsOnlyBuild:
     className: UnityOnMouseDownMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 92bba04ebbb1f12983ccc55cbca4af6b
+      Hash: 7d3d970c42824c40e40d743154c953e6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PanZoom
@@ -984,7 +1005,7 @@ ScriptsOnlyBuild:
     className: ShaderPropAnimator
   - hash:
       serializedVersion: 2
-      Hash: f45403119634f8ccdd24a3185f6978cf
+      Hash: 51d78e5a3dc5d8307ed01d0c0d853936
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: igloo
@@ -1048,12 +1069,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Empire
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1404,7 +1419,7 @@ ScriptsOnlyBuild:
     className: AnimationLink
   - hash:
       serializedVersion: 2
-      Hash: 215bccd76f3b7a9a52102d267dfea978
+      Hash: 5423badddd6c881d21f4316f78027f83
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: IglooPopup
@@ -1608,10 +1623,10 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: be184e6b28cef453a19146aa1147e825
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: EmpireObj
+    className: NotiboxCast
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
