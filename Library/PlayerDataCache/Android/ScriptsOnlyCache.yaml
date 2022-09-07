@@ -9,7 +9,10 @@ ScriptsOnlyBuild:
     - NotiboxCast
     - PanZoom
     - Penguin
+    - Pointer
     - RandomMovement
+    - RaycastScanner
+    - SelectSystem
     - igloo
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -46,7 +49,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateEditor
     - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
@@ -111,6 +113,9 @@ ScriptsOnlyBuild:
     fullTypeName: Penguin
     methodName: goFishing
   - assembly: Assembly-CSharp
+    fullTypeName: Penguin
+    methodName: goFishing
+  - assembly: Assembly-CSharp
     fullTypeName: FishingHole
     methodName: getFished
   - assembly: Assembly-CSharp
@@ -121,7 +126,7 @@ ScriptsOnlyBuild:
     methodName: goFishing
   - assembly: Assembly-CSharp
     fullTypeName: Penguin
-    methodName: goFishing
+    methodName: closeStats
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -167,9 +172,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2378}
     - Class: 114
-      Script: {instanceID: 2922}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 3180}
+      Script: {instanceID: 3178}
+    - Class: 114
+      Script: {instanceID: 3380}
     - Class: 114
       Script: {instanceID: 3400}
     - Class: 114
@@ -213,7 +220,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9176}
     - Class: 114
-      Script: {instanceID: 75048}
+      Script: {instanceID: 55768}
+    - Class: 114
+      Script: {instanceID: 65050}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -429,12 +438,6 @@ ScriptsOnlyBuild:
     className: Benchmark01_UGUI
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NewBehaviourScript
-  - hash:
-      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -571,6 +574,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnDropdownValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NotiboxCast
   - hash:
       serializedVersion: 2
       Hash: 26973d987aa31ab2e9492982bc543e93
@@ -771,7 +780,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
-      Hash: 9f8e618ea388343fff498fcf2e58b0a9
+      Hash: e0a5a1c23d979e35a574625d230549f0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Penguin
@@ -1021,6 +1030,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Tilemap.Extras.dll
     namespaceName: UnityEngine.Tilemaps
     className: GridInformation
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RaycastScanner
   - hash:
       serializedVersion: 2
       Hash: 59ce5902048c1041729c804e2772b2ce
@@ -1623,10 +1638,22 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 377fe448d75e7b74d6d47f55a64a3e3b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: NotiboxCast
+    className: Pointer
+  - hash:
+      serializedVersion: 2
+      Hash: 6a4ceebc9cb52d57de9a36692e263fbe
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SelectSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 3c568f9ea2618ebe3696010b866d06b4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Empire
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

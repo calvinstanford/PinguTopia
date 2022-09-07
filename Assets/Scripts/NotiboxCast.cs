@@ -54,12 +54,12 @@ public class NotiboxCast : MonoBehaviour
                 }
                 Debug.Log("Hit " + result.gameObject.name);
             }                
-            print("false");
+           
             return false;            
         }
         else{
            
-            print("false");
+          
             return false;
         }
     }

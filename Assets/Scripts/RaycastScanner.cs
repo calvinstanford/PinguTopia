@@ -1,4 +1,4 @@
-/*
+
 //TO BE USED IN RAYCASTING IN FUTURE DEVELOPMENT
 
 
@@ -7,8 +7,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RaycastScanner : MonoBehaviour
-{
-    // Start is called before the first frame update
+{ void Update()
+    {
+   if(Input.GetMouseButtonDown(0))
+        {
+
+               Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = 5f;
+ 
+        Vector2 v = Camera.main.ScreenToWorldPoint(mousePosition);
+ 
+        Collider2D[] col = Physics2D.OverlapPointAll(v, 0, -Mathf.Infinity, Mathf.Infinity);
+ 
+        if(col.Length > 0){
+            foreach(Collider2D c in col)
+            {
+                print("please");
+                //Debug.Log("Collided with: " + c.collider2D.gameObject.name);
+                print(c.gameObject.name);
+            }
+        }
+         }
+     }
+ } /* // Start is called before the first frame update
     
     public GameObject fHole;
     public FishingHole fishingHole;
@@ -20,8 +41,7 @@ public class RaycastScanner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+   
        
         {    
         

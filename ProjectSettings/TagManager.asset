@@ -7,6 +7,7 @@ TagManager:
   - Pond
   - igloo
   - notibox
+  - pingu
   layers:
   - Default
   - TransparentFX
