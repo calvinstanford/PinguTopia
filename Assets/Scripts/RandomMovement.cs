@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 /*
 Random movement class for the NPCs to wander around map.
 @author Sasha Buskin
@@ -14,6 +15,8 @@ public float walkTime, walkCounter, waitTime, waitCounter;
 private int WalkDirection;
 public Animator animator;
 private Penguin peng;
+private AIPath fishingPath;
+
 /*
 void Start: The RigidBody2d object is initialised,
             the walk and wait times are set to random lengths between 2 and 10 seconds, 
@@ -24,6 +27,7 @@ void Start: The RigidBody2d object is initialised,
 
 void Start(){
     
+    fishingPath = GetComponent<AIPath>();
     rb = GetComponent<Rigidbody2D>();
     peng = GetComponent<Penguin>();
     waitTime = Random.Range(2, 10);
@@ -44,64 +48,66 @@ void Update: Deals with animation changes throughout.
 
 void Update(){
 
-if(peng.isIdle() == true){
-    if(isWalking)
-    {
-        animator.SetFloat("Speed", 2);
-        walkCounter -= Time.deltaTime;
-        
-        direction = Random.Range(0, 5);
-        
-        
-        switch(WalkDirection)
+if(!fishingPath.canMove){
+    if(peng.isIdle() == true){
+        if(isWalking)
         {
-            case 0:
-                animator.SetFloat("Horizontal", direction);
-                animator.SetFloat("Vertical", moveSpeed);
-                rb.velocity = new Vector2(direction, moveSpeed);
-                animator.SetInteger("StoppingDirection 0", 1);
-
-                break;
-            case 1:
-                animator.SetFloat("Horizontal", moveSpeed);
-                animator.SetFloat("Vertical", direction);
-                rb.velocity = new Vector2(moveSpeed, direction);
-                animator.SetInteger("StoppingDirection 0", 4);
-                break;    
-            case 2:
-                animator.SetFloat("Horizontal", direction);
-                animator.SetFloat("Vertical", -moveSpeed);
-                rb.velocity = new Vector2(direction, -moveSpeed);
-                animator.SetInteger("StoppingDirection 0", 2);
-                break;
-            case 3:
-                animator.SetFloat("Horizontal", -moveSpeed);
-                animator.SetFloat("Vertical", direction);
-                rb.velocity = new Vector2(-moveSpeed, direction);
-                animator.SetInteger("StoppingDirection 0", 3);
-                break;
+            animator.SetFloat("Speed", 2);
+            walkCounter -= Time.deltaTime;
             
+            direction = Random.Range(0, 5);
+            
+            
+            switch(WalkDirection)
+            {
+                case 0:
+                    animator.SetFloat("Horizontal", direction);
+                    animator.SetFloat("Vertical", moveSpeed);
+                    rb.velocity = new Vector2(direction, moveSpeed);
+                    animator.SetInteger("StoppingDirection 0", 1);
 
-        }
-        if(walkCounter<0)
-        {
-            animator.SetFloat("Speed", 0);
-            waitTime = Random.Range(2, 10);
-            walkTime = Random.Range(2, 10);
-            isWalking = false;
-            waitCounter = waitTime;
-        }
-    }
-else
-{
-    waitCounter -= Time.deltaTime;
-   rb.velocity = Vector2.zero;
+                    break;
+                case 1:
+                    animator.SetFloat("Horizontal", moveSpeed);
+                    animator.SetFloat("Vertical", direction);
+                    rb.velocity = new Vector2(moveSpeed, direction);
+                    animator.SetInteger("StoppingDirection 0", 4);
+                    break;    
+                case 2:
+                    animator.SetFloat("Horizontal", direction);
+                    animator.SetFloat("Vertical", -moveSpeed);
+                    rb.velocity = new Vector2(direction, -moveSpeed);
+                    animator.SetInteger("StoppingDirection 0", 2);
+                    break;
+                case 3:
+                    animator.SetFloat("Horizontal", -moveSpeed);
+                    animator.SetFloat("Vertical", direction);
+                    rb.velocity = new Vector2(-moveSpeed, direction);
+                    animator.SetInteger("StoppingDirection 0", 3);
+                    break;
+                
 
-    if(waitCounter<0)
+            }
+            if(walkCounter<0)
+            {
+                animator.SetFloat("Speed", 0);
+                waitTime = Random.Range(2, 10);
+                walkTime = Random.Range(2, 10);
+                isWalking = false;
+                waitCounter = waitTime;
+            }
+        }
+    else
     {
-        ChooseDirection();
+        waitCounter -= Time.deltaTime;
+    rb.velocity = Vector2.zero;
+
+        if(waitCounter<0)
+        {
+            ChooseDirection();
+        }
     }
-}
+    }
 }
 }
 

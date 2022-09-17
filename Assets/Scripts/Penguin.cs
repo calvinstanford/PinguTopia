@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using Pathfinding;
 
 /*
 Penguin object to be attached to every penguin gameObject.
@@ -13,7 +15,7 @@ public class Penguin : MonoBehaviour
     public GameObject penguin;
     private Vector3 position;
     public float m_Speed = 5f;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public Animator animatorWalk;
     public Animator animatorPopup;
     public int fishBag;
@@ -23,12 +25,18 @@ public class Penguin : MonoBehaviour
     float rando;
     public Pointer pointer;
     public SelectSystem SelectSys;
-    public GameObject pt;
+    public GameObject Notibox;
+    public TextMeshProUGUI Notitext;
+    public string penguinName;
+    public AIPath fishingPath;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animatorWalk = gameObject.GetComponent<Animator>();
+        fishingPath = gameObject.GetComponent<AIPath>();
+        
         fishBag = 0;
+        Notitext = Notibox.GetComponent<TextMeshProUGUI>();
     }
     
     public Vector3 getPosition(){
@@ -133,7 +141,7 @@ void FishingController(): Runs in the Update function, controls fish time and ca
         animatorWalk.SetBool("Fish", false); 
         }
         if(fishTime > 0){
-       
+            
             fishTime -= Time.deltaTime;
             print(fishTime);
             rando = Random.Range(0,500);
@@ -141,7 +149,7 @@ void FishingController(): Runs in the Update function, controls fish time and ca
         }
 
         if(fishTime < 0){
-       
+            fishingPath.canMove = false;
             imFishing = false;
             idle = true;
             rb.constraints = RigidbodyConstraints2D.None;
@@ -165,7 +173,7 @@ public void goFishing(): sends penguin to one of 4 fishing spots,
         Debug.Log("Fishingggggg");
         print("idle: "+idle);
     
-        imFishing = true;
+        
         
         float fishingSpot = Random.Range(1,5);
 
@@ -186,18 +194,16 @@ public void goFishing(): sends penguin to one of 4 fishing spots,
             
         }
         
-        rb.position = targetPos;
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        animatorWalk.SetBool("Fish", true);
-
-        float randomTime = Random.Range(15f,50f);
-        fishTime = randomTime;
+        fishingPath.canMove = true;
+       // rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        //animatorWalk.SetBool("Fish", true);
+       
 
     }
     
    
    /*
-void castRod(int fishingLvl): function to control how much fish is caught depending on the penguins fishing level.
+void castRod(int fishingLvl): function to control how much fish is caught depending on the penguins fishing level. Randomised
    
    
    */
@@ -205,12 +211,13 @@ void castRod(int fishingLvl): function to control how much fish is caught depend
    
     void castRod(int fishingLvl){
         
-        print("rando: "+rando);
+        //print("rando: "+rando);
         
         if(fishingLvl == 1){
           
             if (rando<3){
         
+                Notitext.text = Notitext.text+"\n"+penguinName+" has caught a fish!";
                 fishStock.fishNum += 1;
                 print("fishshtock: "+fishStock.fishNum); 
                 fishBag += 1;

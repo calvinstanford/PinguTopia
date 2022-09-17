@@ -382,6 +382,7 @@
 "Assets/Scripts/EmpireObj.cs"
 "Assets/Scripts/FishCounter.cs"
 "Assets/Scripts/FishingHole.cs"
+"Assets/Scripts/FishingPath.cs"
 "Assets/Scripts/igloo.cs"
 "Assets/Scripts/IglooPopup.cs"
 "Assets/Scripts/NotiboxCast.cs"
