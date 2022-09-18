@@ -39,14 +39,12 @@ public class FishingPath : MonoBehaviour
 
         };
         if(fishingPath.reachedEndOfPath){
-            
-        penguin.rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        penguin.animatorWalk.SetBool("Fish", true);
-        penguin.imFishing = true;
-        
         
         if (timeSet == false){
-            float randomTime = Random.Range(15f,50f);
+            penguin.imFishing = true;
+            penguin.rb.constraints = RigidbodyConstraints2D.FreezeAll; 
+            penguin.animatorWalk.SetBool("Fish", true);
+            float randomTime = Random.Range(15f,26f);
             penguin.fishTime = randomTime;
     }       timeSet = true;
         }

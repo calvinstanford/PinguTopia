@@ -154,6 +154,8 @@ void FishingController(): Runs in the Update function, controls fish time and ca
             idle = true;
             rb.constraints = RigidbodyConstraints2D.None;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;     
+           
+            animatorWalk.SetBool("Fish", false);
         }
     }
 
