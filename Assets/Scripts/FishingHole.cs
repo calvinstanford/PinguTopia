@@ -8,18 +8,12 @@ Involes many different variables of the fishing function eg avaliable fish, hunt
 */
 public class FishingHole : MonoBehaviour
 {
-    private int fishPop;
+ 
     public GameObject[] funHunters;
-    private List<GameObject> availHunters  = new List<GameObject>();
-    private GameObject[] huntersFishing;
-    private float closestHunterDistance = 10000000000000f;
+    public List<Penguin> hunters;
     private Penguin closestHunter, penguinScanned;
-    private GameObject closestHunterObj;
-    private Rigidbody2D rb;
-    private float distance;
-    public Camera camera;
     public FishCounter fishCounter;
-    
+    public FishingPath fp;
     /*
     public void getFished(): 
     is called when the user presses the fish button and 
@@ -29,20 +23,35 @@ public class FishingHole : MonoBehaviour
     -should find only hunters. 
     */
     public void getFished(){
-    
+    foreach(GameObject penguin in funHunters)
+    {
+      fp = penguin.GetComponent<FishingPath>();
+      fp.timeSet = false;
+    }
+   
       Debug.Log("Water pressed");
       
       int fl = funHunters.Length;
       int a = Random.Range(0, fl);
-
-      List<int> penguinnumbers = new List<int>();
-      closestHunter = funHunters[a].GetComponent<Penguin>();
-      //Debug.Log("CLOSEST HUNTER DISTANCE: "+closestHunterDistance);
-      if(!closestHunter.imFishing){
-        
-          closestHunter.goFishing();
-          print(closestHunter.name);
+      
+foreach (Penguin penguin in hunters)
+{
+  
+      print(penguin.name);
+       print(penguin.imFishing);
+      if(!penguin.imFishing){
+        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+          penguin.iftimeset = false;
+          penguin.goFishing();
+          break;
       }
+      //Debug.Log("CLOSEST HUNTER DISTANCE: "+closestHunterDistance);
+}
+     
+     
+     
+     
+      
     // print("Distance: "+distance);
       }
     // Start is called before the first frame update
@@ -57,6 +66,8 @@ public class FishingHole : MonoBehaviour
         foreach(GameObject penguin in funHunters){
         //distance = Vector3.Distance(this.transform.position, penguin.transform.position);
         //Debug.Log(distance);
+        
+        hunters.Add(penguin.GetComponent<Penguin>());
         penguinScanned = penguin.GetComponent<Penguin>();
         fish += penguinScanned.fishBag; 
         //if((distance < closestHunterDistance) && (penguinScanned.isfishing().Equals(false))){

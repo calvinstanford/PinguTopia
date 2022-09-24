@@ -41,12 +41,16 @@ public class FishingPath : MonoBehaviour
         if(fishingPath.reachedEndOfPath){
         
         if (timeSet == false){
+            print("DA TIME FALSEEEEEEEE");
             penguin.imFishing = true;
             penguin.rb.constraints = RigidbodyConstraints2D.FreezeAll; 
             penguin.animatorWalk.SetBool("Fish", true);
             float randomTime = Random.Range(15f,26f);
             penguin.fishTime = randomTime;
     }       timeSet = true;
+        }
+        if (timeSet == true){
+            print("DA TIME TRUEEEEEEEEEEEEE");
         }
     } 
     

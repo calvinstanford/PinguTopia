@@ -48,7 +48,7 @@ void Update: Deals with animation changes throughout.
 
 void Update(){
 
-if(!peng.fishingPath.canMove){
+if(!peng.fishingAIPath.canMove){
     if(peng.isIdle() == true){
         if(isWalking)
         {

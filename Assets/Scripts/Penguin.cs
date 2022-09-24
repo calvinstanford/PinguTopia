@@ -10,6 +10,9 @@ Penguin object to be attached to every penguin gameObject.
 public class Penguin : MonoBehaviour
 {
     public string name;
+    public int fishingLevel = 0;
+    public int nurtureLevel = 0;
+    public int combatLevel = 0;
     public bool imFishing = false;
     public bool idle = true;
     public GameObject penguin;
@@ -27,14 +30,16 @@ public class Penguin : MonoBehaviour
     public SelectSystem SelectSys;
     public GameObject Notibox;
     public TextMeshProUGUI Notitext;
+    public FishingPath fp;
     public string penguinName;
-    public AIPath fishingPath;
+    public AIPath fishingAIPath;
+    public bool iftimeset = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animatorWalk = gameObject.GetComponent<Animator>();
-        fishingPath = gameObject.GetComponent<AIPath>();
-        
+        fishingAIPath = gameObject.GetComponent<AIPath>();
+        fp = fishingAIPath.GetComponent<FishingPath>();
         fishBag = 0;
         Notitext = Notibox.GetComponent<TextMeshProUGUI>();
     }
@@ -63,70 +68,11 @@ void Update(): Stops fishing animation if penguin stops fishing,
 */
     void Update()
     {      
-        PenguinSelector();
+        
         FishingController();
     }
 
 
-
-
-/*
-void castRod (int fishingLvl): explained above.
-*/
-    public void closeStats(){
-        animatorPopup.SetBool("OpenStat", false);
-        SelectSys.selectedPenguin.pointer.pointerDeselect();
-        SelectSys.selectorEnabled = true;
-    }
-    
-   
-   
-   
-   
-   
- /*
-public void PenguinSelector(): This function will run in Update(). If the system selector is enabled, 
-                               this function detects touch and creates a raycast2d to detect specifically 
-                               Penguin objects. It then begins the statbox popup animation, saves the 
-                               clicked penguin object in the selectsystem, display a pointer over the seleted penguin,
-                               and sets SelectSys.selectorEnabled = false; which disables the bug of selecting 
-                               multiple. This is changed back to true when closing the statbox popup.
-*/  
-   
-    public void PenguinSelector(){
-    
-    if(SelectSys.selectorEnabled == true){
-             
-            if(Input.GetMouseButtonDown(0)){
-               
-               RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-               print(hit.collider);
-               if (hit.collider != null ){
-                 
-                    print("okfosar((((-----------------------------");
-                    Debug.Log( hit.collider.name );
-                    if (hit.collider.gameObject.GetComponent<Penguin>()){
-                    
-                        print("its a penguin!!!!!!");
-                        animatorPopup.SetBool("OpenStat", true);
-                        SelectSys.selectorEnabled = false;
-                   
-                        print("OOOOOOOOOOOZE");
-                        SelectSys.selectedPenguin = hit.collider.gameObject.GetComponent<Penguin>();
-                        if(!pointer.pointerArrow.gameObject.activeInHierarchy){
-                            
-                            SelectSys.selectedPenguin.pointer.pointerSelect();
-                        }
-                    }                
-                }  
-                Vector3 mousePosition = Input.mousePosition;
-                print(mousePosition);
-
-            }
-        }
-    
-    }
-    
 
     /*
 void FishingController(): Runs in the Update function, controls fish time and calls castrod function with lvl of 1.
@@ -149,13 +95,15 @@ void FishingController(): Runs in the Update function, controls fish time and ca
         }
 
         if(fishTime < 0){
-            fishingPath.canMove = false;
+            fishingAIPath.canMove = false;
+            
             imFishing = false;
             idle = true;
             rb.constraints = RigidbodyConstraints2D.None;
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation;     
-           
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;      
+            
             animatorWalk.SetBool("Fish", false);
+            fishTime = 0;
         }
     }
 
@@ -171,7 +119,7 @@ public void goFishing(): sends penguin to one of 4 fishing spots,
     public void goFishing()
     {
         idle = false;
-        
+        imFishing = true;
         Debug.Log("Fishingggggg");
         print("idle: "+idle);
     
@@ -196,7 +144,7 @@ public void goFishing(): sends penguin to one of 4 fishing spots,
             
         }
         
-        fishingPath.canMove = true;
+        fishingAIPath.canMove = true;
        // rb.constraints = RigidbodyConstraints2D.FreezeAll;
         //animatorWalk.SetBool("Fish", true);
        
@@ -219,7 +167,7 @@ void castRod(int fishingLvl): function to control how much fish is caught depend
           
             if (rando<3){
         
-                Notitext.text = Notitext.text+"\n"+penguinName+" has caught a fish!";
+                Notitext.text = Notitext.text+"\n"+name+" has caught a fish!";
                 fishStock.fishNum += 1;
                 print("fishshtock: "+fishStock.fishNum); 
                 fishBag += 1;
