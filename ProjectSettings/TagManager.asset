@@ -7,11 +7,12 @@ TagManager:
   - Pond
   - igloo
   - notibox
+  - pingu
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Collision
   - Water
   - UI
   - 

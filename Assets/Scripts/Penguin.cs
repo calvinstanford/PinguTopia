@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using Pathfinding;
 
 /*
 Penguin object to be attached to every penguin gameObject.
@@ -8,23 +10,38 @@ Penguin object to be attached to every penguin gameObject.
 public class Penguin : MonoBehaviour
 {
     public string name;
+    public int fishingLevel = 0;
+    public int nurtureLevel = 0;
+    public int combatLevel = 0;
     public bool imFishing = false;
     public bool idle = true;
     public GameObject penguin;
     private Vector3 position;
     public float m_Speed = 5f;
-    private Rigidbody2D rb;
-    public Animator animator;
+    public Rigidbody2D rb;
+    public Animator animatorWalk;
+    public Animator animatorPopup;
     public int fishBag;
     public float fishTime;
     public FishCounter fishStock;
     public Vector2 targetPos;
     float rando;
+    public Pointer pointer;
+    public SelectSystem SelectSys;
+    public GameObject Notibox;
+    public TextMeshProUGUI Notitext;
+    public FishingPath fp;
+    public string penguinName;
+    public AIPath fishingAIPath;
+    public bool iftimeset = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = gameObject.GetComponent<Animator>();
+        animatorWalk = gameObject.GetComponent<Animator>();
+        fishingAIPath = gameObject.GetComponent<AIPath>();
+        fp = fishingAIPath.GetComponent<FishingPath>();
         fishBag = 0;
+        Notitext = Notibox.GetComponent<TextMeshProUGUI>();
     }
     
     public Vector3 getPosition(){
@@ -36,22 +53,77 @@ public class Penguin : MonoBehaviour
     public bool isIdle(){
         return idle;
     }
-    
+        
+/*
+void Update(): Stops fishing animation if penguin stops fishing,
+               functions as fishing timer that goes down each frame.
+
+               Uses a random number between 0 and 500 in the castRod()
+               function: if that random number is less than 3, a fish is caught.
+               numbers can be modified for faster + slower fishing/level based.  
+
+               Also deals with returning penguin to randomly movieng around 
+               after fishing complete.
+
+*/
+    void Update()
+    {      
+        
+        FishingController();
+    }
+
+
+
     /*
-    public void goFishing(): sends penguin to one of 4 fishing spots,
-                             sets relevant bools of penguin object to 
-                             show fishing/not idle. Starts fishing animation.
-                             Method also sets random fishing time,
-                             between 15 and 50 seconds.
+void FishingController(): Runs in the Update function, controls fish time and calls castrod function with lvl of 1.
+
+
     */
+    
+    
+    void FishingController(){
+        if(imFishing == false) 
+        {
+        animatorWalk.SetBool("Fish", false); 
+        }
+        if(fishTime > 0){
+            
+            fishTime -= Time.deltaTime;
+            print(fishTime);
+            rando = Random.Range(0,500);
+            castRod(1);
+        }
+
+        if(fishTime < 0){
+            fishingAIPath.canMove = false;
+            
+            imFishing = false;
+            idle = true;
+            rb.constraints = RigidbodyConstraints2D.None;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;      
+            
+            animatorWalk.SetBool("Fish", false);
+            fishTime = 0;
+        }
+    }
+
+    
+   
+    /*
+public void goFishing(): sends penguin to one of 4 fishing spots,
+                            sets relevant bools of penguin object to 
+                            show fishing/not idle. Starts fishing animation.
+                            Method also sets random fishing time,
+                            between 15 and 50 seconds.
+*/
     public void goFishing()
     {
         idle = false;
-        
+        imFishing = true;
         Debug.Log("Fishingggggg");
         print("idle: "+idle);
     
-        imFishing = true;
+        
         
         float fishingSpot = Random.Range(1,5);
 
@@ -72,59 +144,30 @@ public class Penguin : MonoBehaviour
             
         }
         
-        rb.position = targetPos;
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        animator.SetBool("Fish", true);
-
-        float randomTime = Random.Range(15f,50f);
-        fishTime = randomTime;
+        fishingAIPath.canMove = true;
+       // rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        //animatorWalk.SetBool("Fish", true);
+       
 
     }
     
-/*
-void Update(): Stops fishing animation if penguin stops fishing,
-               functions as fishing timer that goes down each frame.
-
-               Uses a random number between 0 and 500 in the castRod()
-               function: if that random number is less than 3, a fish is caught.
-               numbers can be modified for faster + slower fishing/level based.  
-
-               Also deals with returning penguin to randomly movieng around 
-               after fishing complete.
-*/
-    void Update()
-    {
-       if(imFishing == false) 
-       {
-        animator.SetBool("Fish", false); 
-        }
-        if(fishTime > 0){
-       
-            fishTime -= Time.deltaTime;
-            print(fishTime);
-            rando = Random.Range(0,500);
-            castRod(1);
-        }
-
-        if(fishTime < 0){
-       
-            imFishing = false;
-            idle = true;
-            rb.constraints = RigidbodyConstraints2D.None;
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation;     
-        }
-    }
-/*
-void castRod (int fishingLvl): explained above.
-*/
+   
+   /*
+void castRod(int fishingLvl): function to control how much fish is caught depending on the penguins fishing level. Randomised
+   
+   
+   */
+   
+   
     void castRod(int fishingLvl){
         
-        print("rando: "+rando);
+        //print("rando: "+rando);
         
         if(fishingLvl == 1){
           
             if (rando<3){
         
+                Notitext.text = Notitext.text+"\n"+name+" has caught a fish!";
                 fishStock.fishNum += 1;
                 print("fishshtock: "+fishStock.fishNum); 
                 fishBag += 1;
