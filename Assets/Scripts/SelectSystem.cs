@@ -50,7 +50,17 @@ public void PenguinSelector(): This function will run in Update(). If the system
                  
                     print("okfosar((((-----------------------------");
                     Debug.Log( hit.collider.name );
+                   
                     if (hit.collider.gameObject.GetComponent<Penguin>()){
+                        
+
+                        if(selectedPenguin != null && hit.collider.gameObject.GetComponent<Penguin>()){
+                            selectedPenguin.pointer.pointerDeselect();
+                            selectedPenguin.penguinPath.penguinHit = true;
+                            
+                            
+                        }
+                        
                         selectedPenguin = hit.collider.gameObject.GetComponent<Penguin>();
                         fishLvlText.text = selectedPenguin.fishingLevel.ToString();
                         nurtureLvlText.text = selectedPenguin.nurtureLevel.ToString();
@@ -58,7 +68,7 @@ public void PenguinSelector(): This function will run in Update(). If the system
                         nameText.text = selectedPenguin.name;
                         print("its a penguin!!!!!!");
                         animatorPopup.SetBool("OpenStat", true);
-                        selectorEnabled = false;
+                       // selectorEnabled = false;
                    
                         print("OOOOOOOOOOOZE");
                         
@@ -78,6 +88,19 @@ public void PenguinSelector(): This function will run in Update(). If the system
       public void closeStats(){
         animatorPopup.SetBool("OpenStat", false);
         selectedPenguin.pointer.pointerDeselect();
+        selectedPenguin.penguinPath.deselected = true;
+        selectedPenguin.penguinPath.navigating = false;
+        selectedPenguin.idle = true;
+        selectedPenguin.penguinAIPath.canMove = false;
+       
+        selectedPenguin = null;
+        
+        
+        
+        
         selectorEnabled = true;
+        
+        
+        
     }
 }

@@ -30,16 +30,20 @@ public class Penguin : MonoBehaviour
     public SelectSystem SelectSys;
     public GameObject Notibox;
     public TextMeshProUGUI Notitext;
-    public FishingPath fp;
+    public PenguinPath penguinPath;
     public string penguinName;
-    public AIPath fishingAIPath;
+    public AIPath penguinAIPath;
     public bool iftimeset = false;
+    public GameObject destination;
+    public GameObject fishingLocation;
+    public AIDestinationSetter aIDestinationSetter;
     void Start()
     {
+        aIDestinationSetter = GetComponent<AIDestinationSetter>();
         rb = GetComponent<Rigidbody2D>();
         animatorWalk = gameObject.GetComponent<Animator>();
-        fishingAIPath = gameObject.GetComponent<AIPath>();
-        fp = fishingAIPath.GetComponent<FishingPath>();
+        penguinAIPath = gameObject.GetComponent<AIPath>();
+        penguinPath = penguinAIPath.GetComponent<PenguinPath>();
         fishBag = 0;
         Notitext = Notibox.GetComponent<TextMeshProUGUI>();
     }
@@ -95,7 +99,7 @@ void FishingController(): Runs in the Update function, controls fish time and ca
         }
 
         if(fishTime < 0){
-            fishingAIPath.canMove = false;
+            penguinAIPath.canMove = false;
             
             imFishing = false;
             idle = true;
@@ -144,7 +148,7 @@ public void goFishing(): sends penguin to one of 4 fishing spots,
             
         }
         
-        fishingAIPath.canMove = true;
+        penguinAIPath.canMove = true;
        // rb.constraints = RigidbodyConstraints2D.FreezeAll;
         //animatorWalk.SetBool("Fish", true);
        
