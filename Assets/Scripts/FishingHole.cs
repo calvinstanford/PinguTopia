@@ -13,7 +13,7 @@ public class FishingHole : MonoBehaviour
     public List<Penguin> hunters;
     private Penguin closestHunter, penguinScanned;
     public FishCounter fishCounter;
-    public FishingPath fp;
+    public PenguinPath fp;
     /*
     public void getFished(): 
     is called when the user presses the fish button and 
@@ -25,7 +25,7 @@ public class FishingHole : MonoBehaviour
     public void getFished(){
     foreach(GameObject penguin in funHunters)
     {
-      fp = penguin.GetComponent<FishingPath>();
+      fp = penguin.GetComponent<PenguinPath>();
       fp.timeSet = false;
     }
    
@@ -41,6 +41,7 @@ foreach (Penguin penguin in hunters)
        print(penguin.imFishing);
       if(!penguin.imFishing){
         print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+          penguin.penguinPath.AIDS.target =  penguin.fishingLocation.transform;
           penguin.iftimeset = false;
           penguin.goFishing();
           break;

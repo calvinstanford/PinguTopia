@@ -55,7 +55,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
@@ -809,7 +808,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
-      Hash: 2ddc4be85c0ac0f7ebe2b4dbbd1e431c
+      Hash: 341772888cb033838370d4488e52c7b4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Penguin
@@ -833,7 +832,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: ed15159f869dd7e69447c2ddb6117f3b
+      Hash: 94bca92e597133001e05018d03b4e6e9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FishingHole
@@ -977,7 +976,7 @@ ScriptsOnlyBuild:
     className: TMP_TextInfoDebugTool
   - hash:
       serializedVersion: 2
-      Hash: 0c8145d55dee8060daa51494182370d4
+      Hash: 8a663e4ccaf8808d7ce56ac3df60b698
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FishingPath
