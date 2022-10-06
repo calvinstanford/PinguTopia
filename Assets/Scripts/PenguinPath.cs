@@ -44,11 +44,11 @@ public class PenguinPath : MonoBehaviour
     void Update()
     {
         
-        if (seleSys.selectedPenguin != null){
+        if (seleSys.selectedPenguin != null && navigating == true){
 
            
             if(Input.GetMouseButtonDown(0)){
-                navigating = true; 
+                
                
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
                print(hit.collider);
@@ -57,24 +57,34 @@ public class PenguinPath : MonoBehaviour
                     print("okfosar((((-----------------------------");
                     Debug.Log( hit.collider.name );
                    
-                    if (hit.collider.gameObject.GetComponent<Penguin>()){ 
-                        penguinHit = true;
-                    }
+                   
                }
                 if (!XButDetected && navigating && !penguinHit){
                 if(waitTime != 5){
                     waitTime = 5;
                 }
+                }
                 seleSys.selectedPenguin.idle = false;
                 seleSys.selectedPenguin.destination.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 seleSys.selectedPenguin.aIDestinationSetter.target =  seleSys.selectedPenguin.destination.transform;
                 seleSys.selectedPenguin.penguinAIPath.canMove = true;
-                  
+                penguinHit = true;
             }
             
             }
+        
             
-            
+             if(penguinPath.canMove && !penguinPath.reachedEndOfPath)
+        {       
+                print("PATHING ANIMATION");
+                animator.SetFloat("Speed", 3);
+                animator.SetFloat("Horizontal", penguinPath.desiredVelocity.x);
+                animator.SetFloat("Vertical", penguinPath.desiredVelocity.y);
+                penguinPath.OnTargetReached();
+       
+
+        };
+        
             
             
             if(penguinPath.reachedEndOfPath && !deselected){
@@ -108,29 +118,13 @@ public class PenguinPath : MonoBehaviour
 
         }
         
-        if(penguinPath.reachedEndOfPath){
-            if(deselected){
-               print("JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ");
-                penguin.idle = true;
-                    penguinPath.canMove = false;
-            }
-        }
+       
        
         
         
-        if(penguinPath.canMove && !penguinPath.reachedEndOfPath)
-        {       
-                penguinHit = false;
-                animator.SetFloat("Speed", 3);
-                animator.SetFloat("Horizontal", penguinPath.desiredVelocity.x);
-                animator.SetFloat("Vertical", penguinPath.desiredVelocity.y);
-                penguinPath.OnTargetReached();
        
-
-        };
-        
-        if(navigating == false){
-            if(penguinPath.reachedEndOfPath){
+        if(navigating == false && penguinPath.reachedEndOfPath){
+          
         
         if (timeSet == false){
             print("DA TIME FALSEEEEEEEE");
@@ -140,12 +134,12 @@ public class PenguinPath : MonoBehaviour
             float randomTime = Random.Range(15f,26f);
             penguin.fishTime = randomTime;
     }       timeSet = true;
-        }
+        
         if (timeSet == true){
             print("DA TIME TRUEEEEEEEEEEEEE");
         }
     } 
-    }
-    
-    }
+   
+
+}
 }

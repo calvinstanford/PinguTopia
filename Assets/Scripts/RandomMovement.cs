@@ -15,7 +15,7 @@ public float walkTime, walkCounter, waitTime, waitCounter;
 private int WalkDirection;
 public Animator animator;
 private Penguin peng;
-private AIPath fishingPath;
+private AIPath penguinAIPath;
 
 /*
 void Start: The RigidBody2d object is initialised,
@@ -27,7 +27,7 @@ void Start: The RigidBody2d object is initialised,
 
 void Start(){
     
-    fishingPath = GetComponent<AIPath>();
+    penguinAIPath = GetComponent<AIPath>();
     rb = GetComponent<Rigidbody2D>();
     peng = GetComponent<Penguin>();
     waitTime = Random.Range(2, 10);
@@ -48,7 +48,7 @@ void Update: Deals with animation changes throughout.
 
 void Update(){
 
-
+if(!penguinAIPath.canMove){
     if(peng.isIdle() == true){
         if(isWalking)
         {
@@ -108,7 +108,7 @@ void Update(){
         }
     }
     }
-
+}
 }
 
 

@@ -35,14 +35,14 @@ public class igloo : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
              {
 
-               var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-               RaycastHit hit;
-               if (Physics.Raycast(ray, out hit))
-               {
-                print("OH GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOD FOR YOU");
-               if((hit.transform.tag.Equals("igloo"))){
-                print(hit.transform.tag);
-                
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+               print(hit.collider);
+               if (hit.collider != null ){
+                 
+                    print("okfosar((((-----------------------------");
+                    Debug.Log( hit.collider.name );
+                   
+                    if (hit.collider.gameObject.GetComponent<igloo>()){
                 animator.SetBool("OpenIgloo", true);
                }
                }  

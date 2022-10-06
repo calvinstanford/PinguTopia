@@ -43,6 +43,7 @@ foreach (Penguin penguin in hunters)
         print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
           penguin.penguinPath.AIDS.target =  penguin.fishingLocation.transform;
           penguin.iftimeset = false;
+          penguin.penguinPath.navigating = false;
           penguin.goFishing();
           break;
       }
@@ -70,14 +71,14 @@ foreach (Penguin penguin in hunters)
         
         hunters.Add(penguin.GetComponent<Penguin>());
         penguinScanned = penguin.GetComponent<Penguin>();
-        fish += penguinScanned.fishBag; 
+        //fish += penguinScanned.fishBag; 
         //if((distance < closestHunterDistance) && (penguinScanned.isfishing().Equals(false))){
         // print("fishing: "+penguinScanned.imFishing);
         // closestHunter = penguinScanned;
         // closestHunterDistance = distance;
         }
       
-      fishCounter.fishNum = fish;
+      //fishCounter.fishNum = fish;
     }
       
     }

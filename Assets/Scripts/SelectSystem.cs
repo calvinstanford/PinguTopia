@@ -54,14 +54,15 @@ public void PenguinSelector(): This function will run in Update(). If the system
                     if (hit.collider.gameObject.GetComponent<Penguin>()){
                         
 
-                        if(selectedPenguin != null && hit.collider.gameObject.GetComponent<Penguin>()){
+                        if(selectedPenguin != null){
                             selectedPenguin.pointer.pointerDeselect();
                             selectedPenguin.penguinPath.penguinHit = true;
                             
-                            
+                            selectedPenguin = null;
                         }
                         
                         selectedPenguin = hit.collider.gameObject.GetComponent<Penguin>();
+                        selectedPenguin.penguinPath.navigating = true;
                         fishLvlText.text = selectedPenguin.fishingLevel.ToString();
                         nurtureLvlText.text = selectedPenguin.nurtureLevel.ToString();
                         combatLvlText.text = selectedPenguin.combatLevel.ToString();
@@ -92,8 +93,13 @@ public void PenguinSelector(): This function will run in Update(). If the system
         selectedPenguin.penguinPath.navigating = false;
         selectedPenguin.idle = true;
         selectedPenguin.penguinAIPath.canMove = false;
+        selectedPenguin.penguinPath.AIDS.target =  selectedPenguin.fishingLocation.transform;
        
+       if(selectedPenguin.imFishing){
+            selectedPenguin.imFishing = false;      
+        }
         selectedPenguin = null;
+        
         
         
         
