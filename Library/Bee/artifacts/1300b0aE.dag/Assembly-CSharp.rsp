@@ -380,6 +380,7 @@
 "Assets/Empire.cs"
 "Assets/Scripts/BuildingManager.cs"
 "Assets/Scripts/BuildingPanelSelectUI.cs"
+"Assets/Scripts/BuildingTypeSO.cs"
 "Assets/Scripts/BuildPanelManager.cs"
 "Assets/Scripts/CastleHandler.cs"
 "Assets/Scripts/EmpireObj.cs"
