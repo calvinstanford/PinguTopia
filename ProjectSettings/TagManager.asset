@@ -8,6 +8,8 @@ TagManager:
   - igloo
   - notibox
   - pingu
+  - TempHut
+  - build_ui
   layers:
   - Default
   - TransparentFX
