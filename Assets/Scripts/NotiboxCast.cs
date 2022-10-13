@@ -17,6 +17,8 @@ public class NotiboxCast : MonoBehaviour
     PointerEventData ped;
     EventSystem m_EventSystem;
     List<RaycastResult> results;
+
+    public SelectSystem seleSys;
     
     // Start is called before the first frame update
     void Start()
@@ -53,6 +55,11 @@ public class NotiboxCast : MonoBehaviour
                     return true;                    
                 }
                 Debug.Log("Hit " + result.gameObject.name);
+                if(result.gameObject.name.Equals("StatXBut")){
+                    seleSys.selectedPenguin.penguinPath.XButDetected = true;
+                    seleSys.selectedPenguin.penguinPath.navigating = false;
+                                     print("theassman");
+                }
             }                
            
             return false;            

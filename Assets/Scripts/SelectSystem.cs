@@ -50,15 +50,26 @@ public void PenguinSelector(): This function will run in Update(). If the system
                  
                     print("okfosar((((-----------------------------");
                     Debug.Log( hit.collider.name );
+                   
                     if (hit.collider.gameObject.GetComponent<Penguin>()){
+                        
+
+                        if(selectedPenguin != null){
+                            selectedPenguin.pointer.pointerDeselect();
+                            selectedPenguin.penguinPath.penguinHit = true;
+                            
+                            selectedPenguin = null;
+                        }
+                        
                         selectedPenguin = hit.collider.gameObject.GetComponent<Penguin>();
+                        selectedPenguin.penguinPath.navigating = true;
                         fishLvlText.text = selectedPenguin.fishingLevel.ToString();
                         nurtureLvlText.text = selectedPenguin.nurtureLevel.ToString();
                         combatLvlText.text = selectedPenguin.combatLevel.ToString();
                         nameText.text = selectedPenguin.name;
                         print("its a penguin!!!!!!");
                         animatorPopup.SetBool("OpenStat", true);
-                        selectorEnabled = false;
+                       // selectorEnabled = false;
                    
                         print("OOOOOOOOOOOZE");
                         
@@ -78,6 +89,24 @@ public void PenguinSelector(): This function will run in Update(). If the system
       public void closeStats(){
         animatorPopup.SetBool("OpenStat", false);
         selectedPenguin.pointer.pointerDeselect();
+        selectedPenguin.penguinPath.deselected = true;
+        selectedPenguin.penguinPath.navigating = false;
+        selectedPenguin.idle = true;
+        selectedPenguin.penguinAIPath.canMove = false;
+        selectedPenguin.penguinPath.AIDS.target =  selectedPenguin.fishingLocation.transform;
+       
+       if(selectedPenguin.imFishing){
+            selectedPenguin.imFishing = false;      
+        }
+        selectedPenguin = null;
+        
+        
+        
+        
+        
         selectorEnabled = true;
+        
+        
+        
     }
 }

@@ -5,11 +5,11 @@ ScriptsOnlyBuild:
     - EmpireObj
     - FishCounter
     - FishingHole
-    - FishingPath
     - IglooPopup
     - NotiboxCast
     - PanZoom
     - Penguin
+    - PenguinPath
     - Pointer
     - RandomMovement
     - RaycastScanner
@@ -55,7 +55,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
@@ -67,6 +66,7 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Mask
@@ -195,57 +195,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3180}
     - Class: 114
-      Script: {instanceID: 3382}
+      Script: {instanceID: 3384}
     - Class: 114
-      Script: {instanceID: 3402}
+      Script: {instanceID: 3404}
     - Class: 114
-      Script: {instanceID: 3558}
+      Script: {instanceID: 3560}
     - Class: 114
-      Script: {instanceID: 3700}
+      Script: {instanceID: 3702}
     - Class: 114
-      Script: {instanceID: 4570}
+      Script: {instanceID: 3788}
     - Class: 114
-      Script: {instanceID: 4662}
+      Script: {instanceID: 4572}
     - Class: 114
-      Script: {instanceID: 4742}
+      Script: {instanceID: 4664}
     - Class: 114
-      Script: {instanceID: 4794}
+      Script: {instanceID: 4744}
     - Class: 114
-      Script: {instanceID: 4880}
+      Script: {instanceID: 4796}
     - Class: 114
-      Script: {instanceID: 4920}
+      Script: {instanceID: 4882}
     - Class: 114
-      Script: {instanceID: 5224}
+      Script: {instanceID: 4922}
     - Class: 114
-      Script: {instanceID: 5556}
+      Script: {instanceID: 5226}
     - Class: 114
-      Script: {instanceID: 5616}
+      Script: {instanceID: 5558}
     - Class: 114
-      Script: {instanceID: 6004}
+      Script: {instanceID: 5618}
     - Class: 114
-      Script: {instanceID: 6022}
+      Script: {instanceID: 6006}
     - Class: 114
-      Script: {instanceID: 6202}
+      Script: {instanceID: 6024}
     - Class: 114
-      Script: {instanceID: 6210}
+      Script: {instanceID: 6204}
     - Class: 114
-      Script: {instanceID: 6566}
+      Script: {instanceID: 6212}
     - Class: 114
-      Script: {instanceID: 6972}
+      Script: {instanceID: 6568}
     - Class: 114
-      Script: {instanceID: 7182}
+      Script: {instanceID: 6974}
     - Class: 114
-      Script: {instanceID: 7306}
+      Script: {instanceID: 7184}
     - Class: 114
-      Script: {instanceID: 7626}
+      Script: {instanceID: 7308}
     - Class: 114
-      Script: {instanceID: 7638}
+      Script: {instanceID: 7628}
     - Class: 114
-      Script: {instanceID: 8710}
+      Script: {instanceID: 7640}
     - Class: 114
-      Script: {instanceID: 9028}
+      Script: {instanceID: 8712}
     - Class: 114
-      Script: {instanceID: 9184}
+      Script: {instanceID: 9030}
+    - Class: 114
+      Script: {instanceID: 9186}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -551,6 +553,12 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PointerScript
+  - hash:
+      serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -605,7 +613,7 @@ ScriptsOnlyBuild:
     className: UnityOnDropdownValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 5b4b82932e34aba2a9a5687a0794a85f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NotiboxCast
@@ -809,7 +817,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
-      Hash: 2ddc4be85c0ac0f7ebe2b4dbbd1e431c
+      Hash: d3bce14f8f2a1bc80e714f27c6ea83de
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Penguin
@@ -833,7 +841,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: ed15159f869dd7e69447c2ddb6117f3b
+      Hash: 05d4e875e38ff653706b8390122e86ad
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FishingHole
@@ -977,10 +985,10 @@ ScriptsOnlyBuild:
     className: TMP_TextInfoDebugTool
   - hash:
       serializedVersion: 2
-      Hash: 0c8145d55dee8060daa51494182370d4
+      Hash: ab58be24537d5a56be7a67fd578c3c10
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: FishingPath
+    className: PenguinPath
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f

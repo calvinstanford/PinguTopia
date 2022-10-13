@@ -9,13 +9,16 @@ Penguin object to be attached to every penguin gameObject.
 */
 public class Penguin : MonoBehaviour
 {
+    
     public string name;
     public int fishingLevel = 0;
     public int nurtureLevel = 0;
     public int combatLevel = 0;
     public bool imFishing = false;
     public bool idle = true;
-    public GameObject penguin;
+    public GameObject penguin, destination, fishingLocation, Notibox;
+    public GameObject thinkingBubble;
+    public GameObject hungry4Fish;
     private Vector3 position;
     public float m_Speed = 5f;
     public Rigidbody2D rb;
@@ -28,20 +31,27 @@ public class Penguin : MonoBehaviour
     float rando;
     public Pointer pointer;
     public SelectSystem SelectSys;
-    public GameObject Notibox;
     public TextMeshProUGUI Notitext;
-    public FishingPath fp;
+    public PenguinPath penguinPath;
     public string penguinName;
-    public AIPath fishingAIPath;
+    public AIPath penguinAIPath;
     public bool iftimeset = false;
+    public AIDestinationSetter aIDestinationSetter;
+    public int stomach;
+
+    public GameObject scrollView;
+    
     void Start()
     {
+        stomach = 100;
+        aIDestinationSetter = GetComponent<AIDestinationSetter>();
         rb = GetComponent<Rigidbody2D>();
         animatorWalk = gameObject.GetComponent<Animator>();
-        fishingAIPath = gameObject.GetComponent<AIPath>();
-        fp = fishingAIPath.GetComponent<FishingPath>();
+        penguinAIPath = gameObject.GetComponent<AIPath>();
+        penguinPath = penguinAIPath.GetComponent<PenguinPath>();
         fishBag = 0;
         Notitext = Notibox.GetComponent<TextMeshProUGUI>();
+        InvokeRepeating("HungerTick", 1f, 1f);
     }
     
     public Vector3 getPosition(){
@@ -70,10 +80,67 @@ void Update(): Stops fishing animation if penguin stops fishing,
     {      
         
         FishingController();
+      
+     
+     
+ 
+
     }
+/*
+void HungerTick(): Used in InvokeRepeating in the Start function. Controls the stomach, -1 every tick.
+                   Controls what happens when stomach is at certain levels.
+*/
 
+void HungerTick(){
 
+    if (stomach > 0){ 
+    stomach -= 1;
+    print(stomach);
+    }
+    
+    if (stomach <= 80){
+        if (fishStock.fishNum > 0){
+        fishStock.fishNum -= 1;
+        stomach += 20;
+         Notitext.text = Notitext.text+"\n"+name+" has eaten a fish.";
+         scrollToBot();
+        }
+        
+    }
+    if (stomach < 40){
+        Debug.Log(name +" is hungry...");
+        scrollToBot();
+        thinkingBubble.SetActive(true);
+        
+        
+    }
+    if(stomach >= 40){
+         thinkingBubble.SetActive(false);
+         
+    }
+    if (stomach == 40)
+    {
+         Notitext.text = Notitext.text+"\n"+name+" is hungry!";
+         scrollToBot();
+    }
+    if (stomach == 20)
+    {
+         Notitext.text = Notitext.text+"\n"+name+" is very hungry!";
+         scrollToBot();
+    }
+    if (stomach == 1)
+    {
+         Notitext.text = Notitext.text+"\n"+name+" is dying a hungry death!";
+         scrollToBot();
+    }
+    
+ 
+}
 
+public void scrollToBot(){
+         Canvas.ForceUpdateCanvases();
+         scrollView.GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
+    }
     /*
 void FishingController(): Runs in the Update function, controls fish time and calls castrod function with lvl of 1.
 
@@ -95,7 +162,7 @@ void FishingController(): Runs in the Update function, controls fish time and ca
         }
 
         if(fishTime < 0){
-            fishingAIPath.canMove = false;
+            penguinAIPath.canMove = false;
             
             imFishing = false;
             idle = true;
@@ -144,7 +211,7 @@ public void goFishing(): sends penguin to one of 4 fishing spots,
             
         }
         
-        fishingAIPath.canMove = true;
+        penguinAIPath.canMove = true;
        // rb.constraints = RigidbodyConstraints2D.FreezeAll;
         //animatorWalk.SetBool("Fish", true);
        
@@ -168,6 +235,7 @@ void castRod(int fishingLvl): function to control how much fish is caught depend
             if (rando<3){
         
                 Notitext.text = Notitext.text+"\n"+name+" has caught a fish!";
+                scrollToBot();
                 fishStock.fishNum += 1;
                 print("fishshtock: "+fishStock.fishNum); 
                 fishBag += 1;

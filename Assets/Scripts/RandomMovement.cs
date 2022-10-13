@@ -15,7 +15,7 @@ public float walkTime, walkCounter, waitTime, waitCounter;
 private int WalkDirection;
 public Animator animator;
 private Penguin peng;
-private AIPath fishingPath;
+private AIPath penguinAIPath;
 
 /*
 void Start: The RigidBody2d object is initialised,
@@ -27,7 +27,7 @@ void Start: The RigidBody2d object is initialised,
 
 void Start(){
     
-    fishingPath = GetComponent<AIPath>();
+    penguinAIPath = GetComponent<AIPath>();
     rb = GetComponent<Rigidbody2D>();
     peng = GetComponent<Penguin>();
     waitTime = Random.Range(2, 10);
@@ -48,7 +48,7 @@ void Update: Deals with animation changes throughout.
 
 void Update(){
 
-if(!peng.fishingAIPath.canMove){
+if(!penguinAIPath.canMove){
     if(peng.isIdle() == true){
         if(isWalking)
         {
@@ -64,26 +64,26 @@ if(!peng.fishingAIPath.canMove){
                     animator.SetFloat("Horizontal", direction);
                     animator.SetFloat("Vertical", moveSpeed);
                     rb.velocity = new Vector2(direction, moveSpeed);
-                    animator.SetInteger("StoppingDirection 0", 1);
+                    animator.SetInteger("StoppingDirection 0", 3);
 
                     break;
                 case 1:
                     animator.SetFloat("Horizontal", moveSpeed);
                     animator.SetFloat("Vertical", direction);
                     rb.velocity = new Vector2(moveSpeed, direction);
-                    animator.SetInteger("StoppingDirection 0", 4);
+                    animator.SetInteger("StoppingDirection 0", 2);
                     break;    
                 case 2:
                     animator.SetFloat("Horizontal", direction);
                     animator.SetFloat("Vertical", -moveSpeed);
                     rb.velocity = new Vector2(direction, -moveSpeed);
-                    animator.SetInteger("StoppingDirection 0", 2);
+                    animator.SetInteger("StoppingDirection 0", 4);
                     break;
                 case 3:
                     animator.SetFloat("Horizontal", -moveSpeed);
                     animator.SetFloat("Vertical", direction);
                     rb.velocity = new Vector2(-moveSpeed, direction);
-                    animator.SetInteger("StoppingDirection 0", 3);
+                    animator.SetInteger("StoppingDirection 0", 1);
                     break;
                 
 
