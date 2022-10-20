@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class BuildingManager : MonoBehaviour
 {
@@ -12,16 +13,27 @@ public class BuildingManager : MonoBehaviour
         and the actual building process.
     */
 
+    public TextMeshProUGUI textMesh;
     private BuildingTypeSO activeBuildingType;
+    private FishCounter fishCounter;
+    private FishingHole fishingHole;
 
     // place down building
     private void Update() {
-        if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && activeBuildingType != null) {
-            Vector3 mouseWorldPosition = GetMouseWorldPosition();
-            Instantiate(activeBuildingType.prefab, mouseWorldPosition, Quaternion.identity);
+        int funds = fishCounter.fishNum;
 
-            activeBuildingType = null; // after placing down, reset active building type to null.
+        if(funds == 10){
+            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && activeBuildingType != null) {
+                Vector3 mouseWorldPosition = GetMouseWorldPosition();
+                Instantiate(activeBuildingType.prefab, mouseWorldPosition, Quaternion.identity);
+
+                activeBuildingType = null; // after placing down, reset active building type to null.
+                fishCounter.fishNum -= 10;
+            }
+        } else {
+            // function to show error message here
         }
+        
     }
 
     // set active building type

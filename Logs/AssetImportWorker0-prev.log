@@ -15,7 +15,7 @@ C:/Users/OC/Desktop/UNI/2022/2022 Sem 2/R&D - Part 2/PinguTopia V2/PinguTopia
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51756
+52641
 Successfully changed project path to: C:/Users/OC/Desktop/UNI/2022/2022 Sem 2/R&D - Part 2/PinguTopia V2/PinguTopia
 C:/Users/OC/Desktop/UNI/2022/2022 Sem 2/R&D - Part 2/PinguTopia V2/PinguTopia
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/OC/Desktop/UNI/2022/2022 Sem 2/R&D - Part 2/PinguTopia V2/PinguTopia
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 85.59 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 73.34 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.4f1 (cb45f9cae8b7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -63,80 +63,80 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56788
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.010284 seconds.
+Registered in 0.008526 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 83.98 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 72.96 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.564 seconds
+- Completed reload, in  0.496 seconds
 Domain Reload Profiling:
-	ReloadAssembly (564ms)
-		BeginReloadAssembly (58ms)
+	ReloadAssembly (496ms)
+		BeginReloadAssembly (59ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (0ms)
-		EndReloadAssembly (410ms)
-			LoadAssemblies (57ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (350ms)
+			LoadAssemblies (58ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (71ms)
+			SetupTypeCache (69ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (22ms)
-			SetupLoadedEditorAssemblies (271ms)
+			RebuildScriptCaches (21ms)
+			SetupLoadedEditorAssemblies (221ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (51ms)
+				InitializePlatformSupportModulesInManaged (41ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (84ms)
+				RefreshPlugins (73ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (90ms)
-				ProcessInitializeOnLoadMethodAttributes (44ms)
+				ProcessInitializeOnLoadAttributes (73ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.011083 seconds.
-Android Extension - Scanning For ADB Devices 714 ms
+Registered in 0.009337 seconds.
+Android Extension - Scanning For ADB Devices 731 ms
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\OC\Desktop\UNI\2022\2022 Sem 2\R&D - Part 2\PinguTopia V2\PinguTopia\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\OC\Desktop\UNI\2022\2022 Sem 2\R&D - Part 2\PinguTopia V2\PinguTopia\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Refreshing native plugins compatible for Editor in 70.68 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 70.35 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.879 seconds
+- Completed reload, in  0.854 seconds
 Domain Reload Profiling:
-	ReloadAssembly (880ms)
-		BeginReloadAssembly (85ms)
+	ReloadAssembly (855ms)
+		BeginReloadAssembly (86ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (712ms)
+		EndReloadAssembly (687ms)
 			LoadAssemblies (72ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (163ms)
+			SetupTypeCache (154ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (42ms)
-			SetupLoadedEditorAssemblies (403ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (386ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (12ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (71ms)
-				BeforeProcessingInitializeOnLoad (92ms)
-				ProcessInitializeOnLoadAttributes (189ms)
+				RefreshPlugins (70ms)
+				BeforeProcessingInitializeOnLoad (90ms)
+				ProcessInitializeOnLoadAttributes (176ms)
 				ProcessInitializeOnLoadMethodAttributes (29ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (4ms)
@@ -144,12 +144,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 0.70 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.67 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4260 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 38 unused Assets / (30.2 KB). Loaded Objects now: 4743.
 Memory consumption went from 180.8 MB to 180.7 MB.
-Total: 2.426900 ms (FindLiveObjects: 0.217200 ms CreateObjectMapping: 0.104200 ms MarkObjects: 2.087000 ms  DeleteObjects: 0.017800 ms)
+Total: 2.512300 ms (FindLiveObjects: 0.213900 ms CreateObjectMapping: 0.103200 ms MarkObjects: 2.176500 ms  DeleteObjects: 0.018000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,154 +163,198 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 610278.603076 seconds.
-  path: Assets/BuildingTypes/Temp_Hut.asset
-  artifactKey: Guid(39dac368029a086499a334d84bf43832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BuildingTypes/Temp_Hut.asset using Guid(39dac368029a086499a334d84bf43832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecb7c19f525934365ef8612148d256a2') in 0.031261 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/BuildingTypes/Temp_Hut2.asset
-  artifactKey: Guid(5c4111d3ee80e884da3fafa35598d881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BuildingTypes/Temp_Hut2.asset using Guid(5c4111d3ee80e884da3fafa35598d881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e322cb58022a379004684859db032524') in 0.014094 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.568326 seconds.
-  path: Assets/Temp_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Temp_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: '4c3ae0fd5225738486cd38022e3faa8b') in 0.054421 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Temp_Hut2.prefab
-  artifactKey: Guid(ceffb82bc952f87448cc7ce0665c7964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Temp_Hut2.prefab using Guid(ceffb82bc952f87448cc7ce0665c7964) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b094cd55fe0e67fb1832511dba525253') in 0.009284 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 178.181415 seconds.
-  path: Assets/Temp_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Temp_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: '37dc81d2b7a1b6a64e84bdca999bf10b') in 0.019423 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.207487 seconds.
-  path: Assets/Tiles/Structure/Hunter_Hut.png
-  artifactKey: Guid(12093b27539fed3459baf689803d546d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Structure/Hunter_Hut.png using Guid(12093b27539fed3459baf689803d546d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b62a4d5858e3ba35af1b33e8da57f395') in 0.049925 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.146994 seconds.
-  path: Assets/Temp_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Temp_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: '15be9a53c5d15b987dddc959e57ed95c') in 0.011336 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.597526 seconds.
-  path: Assets/Temp_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Temp_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: '6f04290950831bfd1ecdce34aee84c32') in 0.017179 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.269546 seconds.
-  path: Assets/Temp_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Temp_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: '32fc08f2319e81ff7041ddd968be7c1d') in 0.009621 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.516382 seconds.
-  path: Assets/Temp_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Temp_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: '16eda438d3170281e3420ce4846cd6e1') in 0.007906 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.518396 seconds.
-  path: Assets/Temp_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Temp_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: 'bf1f790738a503150a8a737f0be2fa18') in 0.016250 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.341892 seconds.
-  path: Assets/Temp_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Temp_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: 'cd89c7f9ffaa8e3ae9cde752835140ae') in 0.024445 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.777480 seconds.
-  path: Assets/Temp_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Temp_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: '6200c4bf198e12bcc226daa9202de745') in 0.011256 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.386033 seconds.
-  path: Assets/Temp_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Temp_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: '1c4f56fb84b94ec1904904eea6a1e0b9') in 0.009790 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.193682 seconds.
-  path: Assets/Temp_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Temp_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: 'b22a43e631bfa4131545ed7e4a29b447') in 0.010464 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.293098 seconds.
-  path: Assets/Temp_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Temp_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: 'f0baa1dfc96fbbd1e82b58b93804e134') in 0.010738 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 19.593693 seconds.
-  path: Assets/Hunterer_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Hunterer_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: '9cba3311319948aac9e8cb418e466a0d') in 0.020859 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.342367 seconds.
-  path: Assets/Hunter_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Hunter_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: '14e6638dc307f9c9264db3f5751a1068') in 0.008688 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 48.869000 seconds.
-  path: Assets/BuildingTypes
-  artifactKey: Guid(9f8d8caa8cdb125478ecbe88512307ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BuildingTypes using Guid(9f8d8caa8cdb125478ecbe88512307ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1cdbd3ddaf768f442f53192791b4f4a') in 0.001507 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.741277 seconds.
+  Time since last request: 610776.934977 seconds.
   path: Assets/BuildingTypes/Hunter_Hut.asset
   artifactKey: Guid(39dac368029a086499a334d84bf43832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BuildingTypes/Hunter_Hut.asset using Guid(39dac368029a086499a334d84bf43832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9785f3ae318b62ba90657ed1ffe155b') in 0.001994 seconds 
+Start importing Assets/BuildingTypes/Hunter_Hut.asset using Guid(39dac368029a086499a334d84bf43832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e5d1df69d47608232fe710df63fdd9') in 0.032822 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 23.605906 seconds.
-  path: Assets/Tiles/Structure/Gatherer_Hut.png
-  artifactKey: Guid(4e4878eb8d1ec8d43bb89465b32e65eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Tiles/Structure/Gatherer_Hut.png using Guid(4e4878eb8d1ec8d43bb89465b32e65eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6fbbb46980a293d380e68adc0cdc24d') in 0.030872 seconds 
+  Time since last request: 46.231676 seconds.
+  path: Assets/BuildingTypes/Gatherer_Hut.asset
+  artifactKey: Guid(6385a1fc2abb03b4880bed1c4d458bd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BuildingTypes/Gatherer_Hut.asset using Guid(6385a1fc2abb03b4880bed1c4d458bd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '300ed9e6b7a212897919a290a8f80de1') in 0.001812 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 19.403289 seconds.
-  path: Assets/BuildingTypes/Hunter_Hut.asset
-  artifactKey: Guid(39dac368029a086499a334d84bf43832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BuildingTypes/Hunter_Hut.asset using Guid(39dac368029a086499a334d84bf43832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bed1681fbff4c6f7bff5f80903011be8') in 0.002039 seconds 
+  Time since last request: 46.367790 seconds.
+  path: Assets/Gatherer_Hut Variant.prefab
+  artifactKey: Guid(546ec9d5dc8cb61438db7165f11b71dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gatherer_Hut Variant.prefab using Guid(546ec9d5dc8cb61438db7165f11b71dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
+ -> (artifact id: '815779f19054bf4872a90cebd3730bc9') in 0.075220 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 82.635810 seconds.
-  path: Assets/Hunter_Hut.prefab
-  artifactKey: Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Hunter_Hut.prefab using Guid(4a758ad088f59b14c9173569ce9a846a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
- -> (artifact id: 'e960de7495e2e4653c4297d0c6fbe7a5') in 0.023921 seconds 
+  Time since last request: 10.161519 seconds.
+  path: Assets/Gatherer_Hut.prefab
+  artifactKey: Guid(546ec9d5dc8cb61438db7165f11b71dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Gatherer_Hut.prefab using Guid(546ec9d5dc8cb61438db7165f11b71dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Tried select unknown importer for id '-2' '00000000000000000000000000000000'
+ -> (artifact id: 'cfb5cddbade7d364c608953b532a6555') in 0.010693 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007825 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\OC\Desktop\UNI\2022\2022 Sem 2\R&D - Part 2\PinguTopia V2\PinguTopia\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\OC\Desktop\UNI\2022\2022 Sem 2\R&D - Part 2\PinguTopia V2\PinguTopia\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.752 seconds
+Domain Reload Profiling:
+	ReloadAssembly (752ms)
+		BeginReloadAssembly (109ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (555ms)
+			LoadAssemblies (79ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (150ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (268ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (148ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.27 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4232 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (24.7 KB). Loaded Objects now: 4753.
+Memory consumption went from 183.1 MB to 183.1 MB.
+Total: 2.462800 ms (FindLiveObjects: 0.204000 ms CreateObjectMapping: 0.120300 ms MarkObjects: 2.125600 ms  DeleteObjects: 0.012200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007786 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\OC\Desktop\UNI\2022\2022 Sem 2\R&D - Part 2\PinguTopia V2\PinguTopia\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\OC\Desktop\UNI\2022\2022 Sem 2\R&D - Part 2\PinguTopia V2\PinguTopia\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.724 seconds
+Domain Reload Profiling:
+	ReloadAssembly (725ms)
+		BeginReloadAssembly (104ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (28ms)
+		EndReloadAssembly (552ms)
+			LoadAssemblies (70ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (147ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (272ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (151ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.37 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4232 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (24.7 KB). Loaded Objects now: 4756.
+Memory consumption went from 183.1 MB to 183.1 MB.
+Total: 2.549700 ms (FindLiveObjects: 0.219600 ms CreateObjectMapping: 0.132200 ms MarkObjects: 2.182600 ms  DeleteObjects: 0.014500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007919 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\OC\Desktop\UNI\2022\2022 Sem 2\R&D - Part 2\PinguTopia V2\PinguTopia\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\OC\Desktop\UNI\2022\2022 Sem 2\R&D - Part 2\PinguTopia V2\PinguTopia\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Refreshing native plugins compatible for Editor in 0.68 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.722 seconds
+Domain Reload Profiling:
+	ReloadAssembly (723ms)
+		BeginReloadAssembly (104ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (550ms)
+			LoadAssemblies (70ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (143ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (274ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (69ms)
+				ProcessInitializeOnLoadAttributes (151ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.53 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4232 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (24.7 KB). Loaded Objects now: 4759.
+Memory consumption went from 183.1 MB to 183.1 MB.
+Total: 2.415200 ms (FindLiveObjects: 0.224500 ms CreateObjectMapping: 0.093000 ms MarkObjects: 2.084400 ms  DeleteObjects: 0.012700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
