@@ -13,27 +13,43 @@ public class BuildingManager : MonoBehaviour
         and the actual building process.
     */
 
-    public TextMeshProUGUI textMesh;
     private BuildingTypeSO activeBuildingType;
-    private FishCounter fishCounter;
-    private FishingHole fishingHole;
+    [SerializeField] int funds;
 
+    // void start(){
+    //     GameObject funds = GameObject.Find("fishNum");
+    //     fishCounter = funds.GetComponent<FishCounter>();
+    // }
+
+    // void start(){
+    //     fishCounter = GameObject.Find("getEmpireFunds").GetComponent<FishCounter>();
+    //     funds = fishCounter.getEmpireFunds();
+    // }
     // place down building
     private void Update() {
-        int funds = fishCounter.fishNum;
 
-        if(funds == 10){
+        print("Current Funds: "+funds);
+
+        if(funds >= 10){
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && activeBuildingType != null) {
                 Vector3 mouseWorldPosition = GetMouseWorldPosition();
                 Instantiate(activeBuildingType.prefab, mouseWorldPosition, Quaternion.identity);
 
                 activeBuildingType = null; // after placing down, reset active building type to null.
-                fishCounter.fishNum -= 10;
+                funds -= 1;
             }
-        } else {
-            // function to show error message here
         }
-        
+    }
+
+    public void setEmpireFunds(FishCounter fishCounter){
+        funds = fishCounter.fishNum;
+    }
+
+    public int getEmpireFunds(){
+        return funds;
+        // FishCounter fishCounter = GameObject.Find("FishCounter").GetComponent<FishCounter>();
+        // funds = fishCounter.getEmpireFunds();
+        // return funds;
     }
 
     // set active building type
