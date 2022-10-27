@@ -28,8 +28,8 @@ public class FishCounter : MonoBehaviour
         text.text = fishNum.ToString();
     }
 
-    public void setEmpireFunds(int fishNum){
-        this.fishNum = fishNum;
+    public void setEmpireFunds(int funds){
+        this.fishNum = funds;
     }
 
     public int getEmpireFunds() => this.fishNum;

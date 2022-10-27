@@ -14,7 +14,8 @@ public class BuildingManager : MonoBehaviour
     */
 
     private BuildingTypeSO activeBuildingType;
-    [SerializeField] int funds;
+    public FishCounter fishCounter;
+    private int funds;
 
     // void start(){
     //     GameObject funds = GameObject.Find("fishNum");
@@ -28,6 +29,8 @@ public class BuildingManager : MonoBehaviour
     // place down building
     private void Update() {
 
+        funds = fishCounter.fishNum;
+
         print("Current Funds: "+funds);
 
         if(funds >= 10){
@@ -36,20 +39,10 @@ public class BuildingManager : MonoBehaviour
                 Instantiate(activeBuildingType.prefab, mouseWorldPosition, Quaternion.identity);
 
                 activeBuildingType = null; // after placing down, reset active building type to null.
-                funds -= 1;
+                fishCounter.fishNum -= 10; // cost to build hut taken away from funds.
+                //fishCounter.setEmpireFunds(funds); // set new empire funds. 
             }
         }
-    }
-
-    public void setEmpireFunds(FishCounter fishCounter){
-        funds = fishCounter.fishNum;
-    }
-
-    public int getEmpireFunds(){
-        return funds;
-        // FishCounter fishCounter = GameObject.Find("FishCounter").GetComponent<FishCounter>();
-        // funds = fishCounter.getEmpireFunds();
-        // return funds;
     }
 
     // set active building type
