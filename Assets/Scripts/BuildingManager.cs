@@ -22,9 +22,9 @@ public class BuildingManager : MonoBehaviour
     public TextMeshProUGUI Notitext;
     public GameObject scrollView;
 
-    void start(){
-        Notitext = Notibox.GetComponent<TextMeshProUGUI>();
-    }
+    // void start(){
+    //     Notitext = Notibox.GetComponent<TextMeshProUGUI>();
+    // }
     private void Update() {
 
         funds = fishCounter.getEmpireFunds();
@@ -42,22 +42,34 @@ public class BuildingManager : MonoBehaviour
 
                     //funds = funds - 10; // cost to build hut taken away from funds.
                     //fishCounter.setEmpireFunds(funds); // set new empire funds. 
+                } else {
+                    invalidBuild();
+                    activeBuildingType = null;
                 }
             }
-        } else {
-            msg();
+        } else if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && activeBuildingType != null) {
+            insuffiecientFunds();
+            activeBuildingType = null;
         }
     }
 
-    void msg(){
-        Notitext.text = Notitext.text+"\n Not Enough Fish!";
-        scrollToBot();
+
+    void insuffiecientFunds(){
+        Notitext = Notibox.GetComponent<TextMeshProUGUI>();
+        Notitext.text = Notitext.text+"\n You're Broke, keep your money up dawg!";
+        //scrollToBot();
     }
 
-    public void scrollToBot(){
-         Canvas.ForceUpdateCanvases();
-         scrollView.GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
+    void invalidBuild(){
+        Notitext = Notibox.GetComponent<TextMeshProUGUI>();
+        Notitext.text = Notitext.text+"\n Can't build there, go somewhere else m9";
+        //scrollToBot();
     }
+
+    // public void scrollToBot(){
+    //     Canvas.ForceUpdateCanvases();
+    //     scrollView.GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
+    // }
 
     public void costToBuild() {
         cost = 10;
