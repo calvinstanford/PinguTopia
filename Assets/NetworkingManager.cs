@@ -41,8 +41,8 @@ public class NetworkingManager : MonoBehaviour
     }
 
     public IEnumerator Register(Register register){
-        var uwr = new UnityWebRequest(baseURL+"api/Account/Register","POST");
-        string jsonData = JsonUtility.ToJson(register);
+        var uwr = new UnityWebRequest(baseURL + "api/Account/Register", "POST");
+        string jsonData=JsonUtility.ToJson(register);
 
         byte[] jsonToSend=new System.Text.UTF8Encoding().GetBytes(jsonData);
 
@@ -65,7 +65,7 @@ public class NetworkingManager : MonoBehaviour
         WWWForm form =  new WWWForm();
 
         form.AddField("grant_type","password");
-        form.AddField("Email", loginEmailInputField.text);
+        form.AddField("username", loginEmailInputField.text);
         form.AddField("password", loginPasswordInputField.text);
 
         UnityWebRequest uwr = UnityWebRequest.Post(baseURL +"token", form);
@@ -84,16 +84,16 @@ public class NetworkingManager : MonoBehaviour
 
     }
     
-public IEnumerator SaveData(){
-        WWWForm form =  new WWWForm();
+public IEnumerator SaveData(){                
+       WWWForm form =  new WWWForm();
 
         
-        form.AddField("Email", loginEmailInputField.text);
-        form.AddField("UserData","{score:15}");
+        form.AddField("username", loginEmailInputField.text);
+        form.AddField("UserData", "{score:15}");
 
-        form.headers.Add("Authorization","Bearer " + logIn.access_token);
+        UnityWebRequest uwr = UnityWebRequest.Post(baseURL + "api/UserProfile", form);
 
-        UnityWebRequest uwr = UnityWebRequest.Post(baseURL +"api/userprofile", form);
+        uwr.SetRequestHeader("Authorization", "Bearer " + logIn.access_token);
 
         yield return uwr.SendWebRequest();
 
