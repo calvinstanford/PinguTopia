@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using TMPro;
 
 public class BuildingManager : MonoBehaviour
@@ -17,6 +18,13 @@ public class BuildingManager : MonoBehaviour
     public FishCounter fishCounter;
     public int funds;
     private int cost;
+    public GameObject Notibox;
+    public TextMeshProUGUI Notitext;
+    public GameObject scrollView;
+
+    void start(){
+        Notitext = Notibox.GetComponent<TextMeshProUGUI>();
+    }
     private void Update() {
 
         funds = fishCounter.getEmpireFunds();
@@ -24,17 +32,31 @@ public class BuildingManager : MonoBehaviour
         if(funds >= 10){
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && activeBuildingType != null) {
                 Vector3 mouseWorldPosition = GetMouseWorldPosition();
-                Instantiate(activeBuildingType.prefab, mouseWorldPosition, Quaternion.identity);
+                if (CanSpawnBuilding(activeBuildingType, mouseWorldPosition)){
+                    Instantiate(activeBuildingType.prefab, mouseWorldPosition, Quaternion.identity);
 
-                //fishCounter.fishNum -= 10;
-                costToBuild();
-                activeBuildingType = null; // after placing down, reset active building type to null.
+                    fishCounter.fishNum -= 10;
+                    //costToBuild();
+                    activeBuildingType = null; // after placing down, reset active building type to null.
 
 
-                //funds = funds - 10; // cost to build hut taken away from funds.
-                //fishCounter.setEmpireFunds(funds); // set new empire funds. 
+                    //funds = funds - 10; // cost to build hut taken away from funds.
+                    //fishCounter.setEmpireFunds(funds); // set new empire funds. 
+                }
             }
+        } else {
+            msg();
         }
+    }
+
+    void msg(){
+        Notitext.text = Notitext.text+"\n Not Enough Fish!";
+        scrollToBot();
+    }
+
+    public void scrollToBot(){
+         Canvas.ForceUpdateCanvases();
+         scrollView.GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
     }
 
     public void costToBuild() {
@@ -50,6 +72,17 @@ public class BuildingManager : MonoBehaviour
     // get active building type
     public BuildingTypeSO GetActiveBuildingType() {
         return activeBuildingType;
+    }
+
+    // check to see if user places building down on buildable area
+    private bool CanSpawnBuilding(BuildingTypeSO buildingTypeSO, Vector3 position){
+        BoxCollider2D buildingBoxCollider2D = buildingTypeSO.prefab.GetComponent<BoxCollider2D>();
+
+        if (Physics2D.OverlapBox(position + (Vector3)buildingBoxCollider2D.offset, buildingBoxCollider2D.size, 0)) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     /* Functions to get mouse pointer position */
