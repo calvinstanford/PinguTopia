@@ -26,10 +26,11 @@ public class FishCounter : MonoBehaviour
     void Update()
     {
         text.text = fishNum.ToString();
+        getEmpireFunds();
     }
 
     public void setEmpireFunds(int funds){
-        this.fishNum = funds;
+        fishNum = funds;
     }
 
     public int getEmpireFunds() => this.fishNum;
