@@ -14,9 +14,7 @@ public class NetworkingManager : MonoBehaviour
     public InputField passwordInputField;
     public InputField confirmPasswordInputField;
 
-
     public InputField loginEmailInputField;
-
     public InputField loginPasswordInputField;
     
     
@@ -40,31 +38,35 @@ public class NetworkingManager : MonoBehaviour
         StartCoroutine(LogIn());
     }
 
-    public IEnumerator Register(Register register){
-        var uwr = new UnityWebRequest(baseURL + "api/Account/Register", "POST");
-        string jsonData=JsonUtility.ToJson(register);
+    public IEnumerator Register(Register register)
+    {
+      WWWForm form = new WWWForm();
 
-        byte[] jsonToSend=new System.Text.UTF8Encoding().GetBytes(jsonData);
+        form.AddField("Email", emailInputField.text);
+        form.AddField("username", emailInputField.text);
+        form.AddField("password", passwordInputField.text);
+        form.AddField("password_confirmation", confirmPasswordInputField.text);
 
-        uwr.uploadHandler= (UploadHandler)new UploadHandlerRaw(jsonToSend);
-        uwr.downloadHandler= (DownloadHandler)new DownloadHandlerBuffer();
+        UnityWebRequest uwr = UnityWebRequest.Post(baseURL + "/api/Account/Register", form);
 
-        uwr.SetRequestHeader("Content-Type", "application/json");
-
+        
         yield return uwr.SendWebRequest();
 
-        if(uwr.result == UnityWebRequest.Result.ConnectionError)
+        if (uwr.result == UnityWebRequest.Result.ConnectionError)
         {
-            Debug.Log("Error: "+ uwr.error);
+            Debug.Log("Error" + uwr.error);
         }
-        else{
+        else
+        {
             Debug.Log(uwr.downloadHandler.text);
         }
     }
+
     public IEnumerator LogIn(){
         WWWForm form =  new WWWForm();
 
         form.AddField("grant_type","password");
+        form.AddField("Email", emailInputField.text);
         form.AddField("username", loginEmailInputField.text);
         form.AddField("password", loginPasswordInputField.text);
 
@@ -87,7 +89,7 @@ public class NetworkingManager : MonoBehaviour
 public IEnumerator SaveData(){                
        WWWForm form =  new WWWForm();
 
-        
+        form.AddField("Email", emailInputField.text);
         form.AddField("username", loginEmailInputField.text);
         form.AddField("UserData", "{score:15}");
 
