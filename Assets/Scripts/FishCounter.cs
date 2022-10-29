@@ -28,7 +28,9 @@ public class FishCounter : MonoBehaviour
         text.text = fishNum.ToString();
     }
 
+    // function to set new empire funds, used by BuildingManager Script
     public void setEmpireFunds(int amount) => this.fishNum = amount;
 
+    // function to send empire funds data to BuildingManager Script
     public int getEmpireFunds() => this.fishNum;
 }

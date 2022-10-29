@@ -5,6 +5,17 @@ using UnityEngine.UI;
 
 public class BuildingPanelSelectUI : MonoBehaviour
 {
+    /* 
+        BuildingPanelSelectUI Class will be responsible for
+        generating build panel UI.
+
+        Will print duplicates of button template game object.
+        Number of duplicates will be determined by number of 
+        different building types (prefabs) set in Unity Editor.
+
+        Also responsible for setting Active Building Type Selected 
+        data for the Building Manager Script to manipulate.
+    */
     [SerializeField] private List<BuildingTypeSO> buildingTypeSOList;
     private BuildingManager buildingManager;
 
