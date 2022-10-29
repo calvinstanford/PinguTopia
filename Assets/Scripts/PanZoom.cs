@@ -28,9 +28,11 @@ Also had pinch to zoom in/out function.
         if(Input.GetMouseButtonDown(0) && !notiBoxCast.notiBoxDetected(Input.GetMouseButton(0))){
             
             touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log("hahahaha2");
+            Debug.Log("hahahaha2");
         }
+        
         if(Input.touchCount == 2){
+           
             Debug.Log("hahahaha3");
             Touch touchZero = Input.GetTouch(0);
             Touch touchOne = Input.GetTouch(1);
@@ -44,13 +46,16 @@ Also had pinch to zoom in/out function.
             float difference = currentMagnitude - prevMagnitude;
 
             zoom(difference * 0.01f);
+        
         }else if(Input.GetMouseButton(0)){
+            
             if(!notiBoxCast.notiBoxDetected(Input.GetMouseButton(0))){
            
             Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Camera.main.transform.position += direction;
+            }
         }
-        }
+        
         zoom(Input.GetAxis("Mouse ScrollWheel"));
 	}
 
