@@ -392,6 +392,7 @@
 "Assets/Scripts/PointerScript.cs"
 "Assets/Scripts/RandomMovement.cs"
 "Assets/Scripts/RaycastScanner.cs"
+"Assets/Scripts/RoleChanger.cs"
 "Assets/Scripts/SelectSystem.cs"
 "Assets/Scripts/SpriteImageUpdate.cs"
 "Assets/Scripts/SpriteUpdater.cs"

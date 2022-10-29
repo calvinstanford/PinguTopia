@@ -13,7 +13,7 @@ public class EmpireObj : MonoBehaviour
    public Penguin[] pingus;
    public Penguin[] hunters;
    public Penguin[] nurturers;
-   public string pinguNum; 
+   public string pinguNum;  
     // Start is called before the first frame update
     void Start()
     {
