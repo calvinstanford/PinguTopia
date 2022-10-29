@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":35.35359191894531,"y":-12.03697681427002,"z":-1.5371348857879639},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":59.947593688964847,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":false,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":192.51219177246095,"y":341.5018005371094,"z":-11.5723295211792},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":169.35621643066407,"orthographic":true}
+>>>>>>> H-Branch
