@@ -18,7 +18,6 @@ public class FishingHole : MonoBehaviour
     public void getFished(): 
     is called when the user presses the fish button and 
     finds a penguin object and triggers its goFishing() function.
-
     -should find nearest penguin?
     -should find only hunters. 
     */
@@ -74,6 +73,3 @@ public class FishingHole : MonoBehaviour
     }
       
   }
-
-
-

@@ -3,23 +3,27 @@
   "Assemblies": [
     {
       "FullName": "Unity.2D.Animation.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2022-10-29T09:46:45.5438213Z"
+      "LastWriteTime": "2022-10-29T10:19:20.9117975Z"
     },
     {
-      "FullName": "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "FullName": "mscorlib, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
       "LastWriteTime": "2022-05-25T19:28:24Z"
     },
     {
       "FullName": "Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2022-10-29T09:46:45.5933645Z"
+      "LastWriteTime": "2022-10-29T10:19:20.9633409Z"
     },
     {
       "FullName": "UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
       "LastWriteTime": "2022-05-25T19:43:06Z"
     },
     {
+      "FullName": "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+      "LastWriteTime": "2022-05-25T19:28:24Z"
+    },
+    {
       "FullName": "Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2022-10-29T09:46:45.5808541Z"
+      "LastWriteTime": "2022-10-29T10:19:20.9513307Z"
     },
     {
       "FullName": "netstandard, Version=2.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51",
@@ -31,15 +35,11 @@
     },
     {
       "FullName": "Unity.2D.Common.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2022-10-29T09:46:45.5503275Z"
+      "LastWriteTime": "2022-10-29T10:19:20.9188035Z"
     },
     {
       "FullName": "Unity.2D.SpriteShape.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2022-10-29T09:46:45.567342Z"
-    },
-    {
-      "FullName": "mscorlib, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2022-05-25T19:28:24Z"
+      "LastWriteTime": "2022-10-29T10:19:20.9368181Z"
     },
     {
       "FullName": "UnityEngine.SpriteShapeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
@@ -59,7 +59,8 @@
         3,
         4,
         5,
-        6
+        6,
+        7
       ]
     },
     {
@@ -69,12 +70,12 @@
       "LinkName": "7D2E04AB7759F565",
       "AssemblyDependencyIndices": [
         0,
-        1,
-        6,
-        2,
-        5,
         4,
         7,
+        2,
+        6,
+        5,
+        8,
         3
       ]
     },
@@ -84,14 +85,13 @@
       "ModuleHash": "a37af4939bfbbf335fc8288406f3b71d",
       "LinkName": "104599FDEEB36FAE",
       "AssemblyDependencyIndices": [
-        6,
-        8,
+        7,
         9,
         10,
-        1,
-        5,
+        4,
+        6,
         2,
-        7
+        8
       ]
     },
     {
@@ -100,9 +100,9 @@
       "ModuleHash": "2e047a3f0a5c04b28c0b85b273ce8d48",
       "LinkName": "801E9A000BB37B05",
       "AssemblyDependencyIndices": [
-        4,
         5,
-        1
+        6,
+        4
       ]
     },
     {
@@ -111,9 +111,9 @@
       "ModuleHash": "4b86101fd7bd029045d0d55b9ee9f782",
       "LinkName": "CDCA4A5193BE5947",
       "AssemblyDependencyIndices": [
-        4,
         5,
-        1
+        6,
+        4
       ]
     },
     {
@@ -123,12 +123,12 @@
       "LinkName": "4E9252389FAD9FEE",
       "AssemblyDependencyIndices": [
         0,
-        7,
-        1,
-        6,
-        2,
+        8,
         4,
+        7,
+        2,
         5,
+        6,
         3
       ]
     }
