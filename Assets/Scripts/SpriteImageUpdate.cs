@@ -6,10 +6,12 @@ public class SpriteImageUpdate : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public Sprite sp1,sp2;
+    public Penguin pengselected;
 
     // Start is called before the first frame update
     void Start()
     {
+        pengselected = gameObject.GetComponent
         spriteRenderer = this.GetComponent<SpriteRenderer>();
     }
 
