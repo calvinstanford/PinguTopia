@@ -78,13 +78,7 @@ void Update(): Stops fishing animation if penguin stops fishing,
 */
     void Update()
     {      
-        
         FishingController();
-      
-     
-     
- 
-
     }
 /*
 void HungerTick(): Used in InvokeRepeating in the Start function. Controls the stomach, -1 every tick.

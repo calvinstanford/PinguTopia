@@ -31,7 +31,7 @@ public class NotiboxCast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    results = new List<RaycastResult>();
+        results = new List<RaycastResult>();
     }
    
    /*public bool notiBoxDetected(bool input):   Graphics raycast function attached to the Canvas 
@@ -54,11 +54,14 @@ public class NotiboxCast : MonoBehaviour
                     print("true");
                     return true;                    
                 }
+                
                 Debug.Log("Hit " + result.gameObject.name);
+                
                 if(result.gameObject.name.Equals("StatXBut")){
+                    
                     seleSys.selectedPenguin.penguinPath.XButDetected = true;
                     seleSys.selectedPenguin.penguinPath.navigating = false;
-                                     print("theassman");
+                    print("theassman");
                 }
             }                
            
