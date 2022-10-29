@@ -33,26 +33,28 @@ public class igloo : MonoBehaviour
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
-             {
-
-               var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-               RaycastHit hit;
-               if (Physics.Raycast(ray, out hit))
-               {
-                print("OH GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOD FOR YOU");
-               if((hit.transform.tag.Equals("igloo"))){
-                print(hit.transform.tag);
-                
-                animator.SetBool("OpenIgloo", true);
-               }
-               }  
-                Vector3 mousePosition = Input.mousePosition;
-                print(mousePosition);
-
-                        }
-        
+        {
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            print(hit.collider);
+            
+            if (hit.collider != null ){
+                 
+                print("okfosar((((-----------------------------");
+                Debug.Log( hit.collider.name );
+                   
+                    if (hit.collider.gameObject.GetComponent<igloo>()){
+                    
+                        animator.SetBool("OpenIgloo", true);            
                     }
-    public void iglooXButt(){
+             }  
+               
+            Vector3 mousePosition = Input.mousePosition;
+            print(mousePosition);
+        }
+        
+    }
+    public void iglooXButt()
+    {
        animator.SetBool("OpenIgloo", false);
     }
 }
@@ -60,6 +62,42 @@ public class igloo : MonoBehaviour
               
             
             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             
                /*if 
          if (Input.GetMouseButtonDown(0))

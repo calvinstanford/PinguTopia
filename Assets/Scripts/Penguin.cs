@@ -72,7 +72,6 @@ void Update(): Stops fishing animation if penguin stops fishing,
 */
     void Update()
     {      
-        
         FishingController();
     }
 

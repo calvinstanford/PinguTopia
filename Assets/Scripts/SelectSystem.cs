@@ -40,52 +40,56 @@ public void PenguinSelector(): This function will run in Update(). If the system
    
     public void PenguinSelector(){
     
-    if(selectorEnabled == true){
- 
-            if(Input.GetMouseButtonDown(0)){
-               
-               RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-               print(hit.collider);
-               if (hit.collider != null ){
-                 
-                    print("okfosar((((-----------------------------");
-                    Debug.Log( hit.collider.name );
-                   
-                    if (hit.collider.gameObject.GetComponent<Penguin>()){
+        if(selectorEnabled == true){
+    
+                if(Input.GetMouseButtonDown(0)){
+                
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+                print(hit.collider);
+                
+                    if (hit.collider != null ){
                         
+                        print("okfosar((((-----------------------------");
+                        Debug.Log( hit.collider.name );
+                    
+                        if (hit.collider.gameObject.GetComponent<Penguin>()){
+                            
 
-                        if(selectedPenguin != null && hit.collider.gameObject.GetComponent<Penguin>()){
-                            selectedPenguin.pointer.pointerDeselect();
-                            selectedPenguin.penguinPath.penguinHit = true;
+                            if(selectedPenguin != null){
+                                selectedPenguin.pointer.pointerDeselect();
+                                selectedPenguin.penguinPath.penguinHit = true;
+                                
+                                selectedPenguin = null;
+                            }
                             
+                            selectedPenguin = hit.collider.gameObject.GetComponent<Penguin>();
+                            selectedPenguin.penguinPath.navigating = true;
+                            fishLvlText.text = selectedPenguin.fishingLevel.ToString();
+                            nurtureLvlText.text = selectedPenguin.nurtureLevel.ToString();
+                            combatLvlText.text = selectedPenguin.combatLevel.ToString();
+                            nameText.text = selectedPenguin.name;
+                            print("its a penguin!!!!!!");
+                            animatorPopup.SetBool("OpenStat", true);
+                        // selectorEnabled = false;
+                    
+                            print("OOOOOOOOOOOZE");
                             
-                        }
-                        
-                        selectedPenguin = hit.collider.gameObject.GetComponent<Penguin>();
-                        fishLvlText.text = selectedPenguin.fishingLevel.ToString();
-                        nurtureLvlText.text = selectedPenguin.nurtureLevel.ToString();
-                        combatLvlText.text = selectedPenguin.combatLevel.ToString();
-                        nameText.text = selectedPenguin.name;
-                        print("its a penguin!!!!!!");
-                        animatorPopup.SetBool("OpenStat", true);
-                       // selectorEnabled = false;
-                   
-                        print("OOOOOOOOOOOZE");
-                        
-                        if(!selectedPenguin.pointer.pointerArrow.gameObject.activeInHierarchy){
-                            
-                            selectedPenguin.pointer.pointerSelect();
-                        }
-                    }                
-                }  
-                Vector3 mousePosition = Input.mousePosition;
-                print(mousePosition);
+                            if(!selectedPenguin.pointer.pointerArrow.gameObject.activeInHierarchy){
+                                
+                                selectedPenguin.pointer.pointerSelect();
+                            }
+                        }                
+                    }  
+                    Vector3 mousePosition = Input.mousePosition;
+                    print(mousePosition);
 
-            }
+                }
         }
     
     }
-      public void closeStats(){
+    
+    public void closeStats(){
+        
         animatorPopup.SetBool("OpenStat", false);
         selectedPenguin.pointer.pointerDeselect();
         selectedPenguin.penguinPath.deselected = true;
@@ -93,14 +97,13 @@ public void PenguinSelector(): This function will run in Update(). If the system
         selectedPenguin.idle = true;
         selectedPenguin.penguinAIPath.canMove = false;
        
+        if(selectedPenguin.imFishing){
+            selectedPenguin.imFishing = false;      
+        }
+        
         selectedPenguin = null;
-        
-        
-        
-        
         selectorEnabled = true;
         
-        
-        
+
     }
 }
