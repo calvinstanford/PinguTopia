@@ -22,58 +22,57 @@ public class BuildingManager : MonoBehaviour
     public TextMeshProUGUI Notitext;
     public GameObject scrollView;
 
-    // void start(){
-    //     Notitext = Notibox.GetComponent<TextMeshProUGUI>();
-    // }
     private void Update() {
-
+        // funds = fishCounter.getEmpireFunds(); // get funds from empire funds
         funds = fishCounter.getEmpireFunds();
+        cost = 10;
 
         if(funds >= 10){
             if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && activeBuildingType != null) {
                 Vector3 mouseWorldPosition = GetMouseWorldPosition();
                 if (CanSpawnBuilding(activeBuildingType, mouseWorldPosition)){
-                    Instantiate(activeBuildingType.prefab, mouseWorldPosition, Quaternion.identity);
+                    costToBuild(); // calculate and implement costs
+                   
+                    funds = fishCounter.getEmpireFunds(); // update funds
 
-                    fishCounter.fishNum -= 10;
-                    //costToBuild();
+                    Instantiate(activeBuildingType.prefab, mouseWorldPosition, Quaternion.identity); // place building down in-game
+                    
                     activeBuildingType = null; // after placing down, reset active building type to null.
-
-
-                    //funds = funds - 10; // cost to build hut taken away from funds.
-                    //fishCounter.setEmpireFunds(funds); // set new empire funds. 
                 } else {
-                    invalidBuild();
+                    invalidBuild(); // if user choses a spot which is not within the buildable area, prompt user with error
                     activeBuildingType = null;
                 }
             }
         } else if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && activeBuildingType != null) {
-            insuffiecientFunds();
+            insufficientFunds(); // if user has insufficient funds, prompt user with error
             activeBuildingType = null;
         }
     }
 
-
-    void insuffiecientFunds(){
-        Notitext = Notibox.GetComponent<TextMeshProUGUI>();
-        Notitext.text = Notitext.text+"\n You're Broke, keep your money up dawg!";
-        //scrollToBot();
+    // function to calculate remaining funds and update empire funds
+    public void costToBuild() {
+        funds = funds - cost;
+        fishCounter.setEmpireFunds(funds);
     }
 
+    // function to print message using in-game notification box
+    void insufficientFunds(){
+        Notitext = Notibox.GetComponent<TextMeshProUGUI>();
+        Notitext.text = Notitext.text+"\n You're Broke, keep your money up dawg!";
+        scrollToBot();
+    }
+
+    // function to print message using in-game notification box
     void invalidBuild(){
         Notitext = Notibox.GetComponent<TextMeshProUGUI>();
         Notitext.text = Notitext.text+"\n Can't build there, go somewhere else m9";
-        //scrollToBot();
+        scrollToBot();
     }
 
-    // public void scrollToBot(){
-    //     Canvas.ForceUpdateCanvases();
-    //     scrollView.GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
-    // }
-
-    public void costToBuild() {
-        cost = 10;
-        fishCounter.fishNum = funds - cost;
+    // formatting function for in-game notification box
+    public void scrollToBot(){
+        Canvas.ForceUpdateCanvases();
+        scrollView.GetComponent<ScrollRect>().verticalNormalizedPosition = 0f;
     }
 
     // set active building type

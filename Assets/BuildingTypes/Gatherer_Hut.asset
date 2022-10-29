@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1ecb7fd2ba1be44853c441bea30664, type: 3}
   m_Name: Gatherer_Hut
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1139272928657534995, guid: 546ec9d5dc8cb61438db7165f11b71dc, type: 3}
+  prefab: {fileID: 5647610207572499564, guid: d85a844a31f572b40b10784023a7612a, type: 3}
   sprite: {fileID: 21300000, guid: 4e4878eb8d1ec8d43bb89465b32e65eb, type: 3}

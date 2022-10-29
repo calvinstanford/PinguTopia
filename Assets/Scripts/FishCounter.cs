@@ -15,7 +15,7 @@ public class FishCounter : MonoBehaviour
     // Start is called before the first frame update
     GameObject num ;
     public TextMeshProUGUI text;
-    public int fishNum = 0;
+    public int fishNum;
     
     void Start()
     {
@@ -26,12 +26,9 @@ public class FishCounter : MonoBehaviour
     void Update()
     {
         text.text = fishNum.ToString();
-        getEmpireFunds();
     }
 
-    public void setEmpireFunds(int funds){
-        fishNum = funds;
-    }
+    public void setEmpireFunds(int amount) => this.fishNum = amount;
 
     public int getEmpireFunds() => this.fishNum;
 }

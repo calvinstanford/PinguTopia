@@ -77,7 +77,7 @@ foreach (Penguin penguin in hunters)
         // closestHunterDistance = distance;
         }
       
-      fishCounter.fishNum = fish;
+      //fishCounter.fishNum = fish;
     }
       
     }
