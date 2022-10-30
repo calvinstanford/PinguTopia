@@ -431,6 +431,9 @@
     <Reference Include="Unity.Burst.Cecil">
         <HintPath>A:\PinguTopia\Library\PackageCache\com.unity.burst@1.6.5\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
+    <Reference Include="websocket-sharp">
+        <HintPath>A:\PinguTopia\Library\PackageCache\com.unity.services.wire@1.1.0\Plugins\websocket-sharp.dll</HintPath>
+    </Reference>
     <Reference Include="log4netPlastic">
         <HintPath>A:\PinguTopia\Library\PackageCache\com.unity.collab-proxy@1.15.17\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
     </Reference>

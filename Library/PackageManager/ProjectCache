@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638027101114723504
-    m_Hash: 608139652
+      ticks: 638027109026131898
+    m_Hash: 4131020941
   m_LockFileStatus:
     m_FilePath: A:/PinguTopia/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638027101114733477
-    m_Hash: 3079248
+      ticks: 638027109026161822
+    m_Hash: 3511442606
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -129,7 +129,7 @@ m_ResolvedPackages:
     version: 1.0.1
   resolvedDependencies:
   - name: com.unity.services.core
-    version: 1.4.0
+    version: 1.4.2
   - name: com.unity.modules.unitywebrequest
     version: 1.0.0
   - name: com.unity.nuget.newtonsoft-json
@@ -499,6 +499,181 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.2.5
+    nextVersion: 
+- packageId: com.unity.services.cloudsave@2.0.1
+  testable: 0
+  isDirectDependency: 1
+  version: 2.0.1
+  source: 1
+  resolvedPath: A:\PinguTopia\Library\PackageCache\com.unity.services.cloudsave@2.0.1
+  assetPath: Packages/com.unity.services.cloudsave
+  name: com.unity.services.cloudsave
+  displayName: Cloud Save
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: "Build better player experiences with seamless game data stored securely
+    in the cloud.\n\nUse Cloud Save to store your players\u2019 progress and preferences,
+    by doing so you can share this data between all the players\u2019 devices and
+    any game backend services."
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 1.0.0-pre.2
+    - 1.0.0-pre.3
+    - 2.0.0-pre.2
+    - 2.0.0
+    - 2.0.1
+    compatible:
+    - 1.0.0-pre.2
+    - 1.0.0-pre.3
+    - 2.0.0-pre.2
+    - 2.0.0
+    - 2.0.1
+    verified: 
+  dependencies:
+  - name: com.unity.services.authentication
+    version: 2.0.0
+  - name: com.unity.services.core
+    version: 1.4.0
+  resolvedDependencies:
+  - name: com.unity.services.authentication
+    version: 2.1.1
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.0.2
+  - name: com.unity.services.core
+    version: 1.4.2
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637914976550000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+    revision: d09ddf585f4d43d29caf510aa9706d940d7a27f6
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 1.0.0-pre.3
+- packageId: com.unity.services.multiplay@1.0.0-pre.6
+  testable: 0
+  isDirectDependency: 1
+  version: 1.0.0-pre.6
+  source: 1
+  resolvedPath: A:\PinguTopia\Library\PackageCache\com.unity.services.multiplay@1.0.0-pre.6
+  assetPath: Packages/com.unity.services.multiplay
+  name: com.unity.services.multiplay
+  displayName: Multiplay
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: The Multiplay SDK provides functionality to facilitate Multiplay services.
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 1.0.0-pre.5
+    - 1.0.0-pre.6
+    compatible:
+    - 1.0.0-pre.5
+    - 1.0.0-pre.6
+    verified: 
+  dependencies:
+  - name: com.unity.services.core
+    version: 1.4.2
+  - name: com.unity.services.wire
+    version: 1.1.0
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequestassetbundle
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequestaudio
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequesttexture
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequestwww
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.0.2
+  resolvedDependencies:
+  - name: com.unity.services.core
+    version: 1.4.2
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.0.2
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  - name: com.unity.services.wire
+    version: 1.1.0
+  - name: com.unity.services.authentication
+    version: 2.1.1
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequestassetbundle
+    version: 1.0.0
+  - name: com.unity.modules.assetbundle
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequestaudio
+    version: 1.0.0
+  - name: com.unity.modules.audio
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequesttexture
+    version: 1.0.0
+  - name: com.unity.modules.imageconversion
+    version: 1.0.0
+  - name: com.unity.modules.unitywebrequestwww
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637967799620000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+    revision: dafd2c1bc57f5f67f9838714350c0c05b3acfe61
+    path: 
+  unityLifecycle:
+    version: 
     nextVersion: 
 - packageId: com.unity.test-framework@1.1.31
   testable: 0
@@ -911,6 +1086,106 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.6.4
+    nextVersion: 
+- packageId: com.unity.toolchain.win-x86_64-linux-x86_64@2.0.2
+  testable: 0
+  isDirectDependency: 1
+  version: 2.0.2
+  source: 1
+  resolvedPath: A:\PinguTopia\Library\PackageCache\com.unity.toolchain.win-x86_64-linux-x86_64@2.0.2
+  assetPath: Packages/com.unity.toolchain.win-x86_64-linux-x86_64
+  name: com.unity.toolchain.win-x86_64-linux-x86_64
+  displayName: Toolchain Win Linux x64
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Cross-compilation toolchain to build player target Linux x86_64 on
+    host Windows x86_64
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 0.1.4-preview
+    - 0.1.5-preview
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 0.1.20-preview
+    - 0.1.21-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    compatible:
+    - 0.1.4-preview
+    - 0.1.5-preview
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 0.1.20-preview
+    - 0.1.21-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    verified: 
+  dependencies:
+  - name: com.unity.sysroot
+    version: 2.0.3
+  - name: com.unity.sysroot.linux-x86_64
+    version: 2.0.2
+  resolvedDependencies:
+  - name: com.unity.sysroot
+    version: 2.0.3
+  - name: com.unity.sysroot.linux-x86_64
+    version: 2.0.2
+  keywords:
+  - toolchain
+  - windows
+  - linux
+  - cross-compilation
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637902311680000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.sysroot.git
+    revision: 66ed41bba76e1f66c4e578e9bad86d33dff8b82b
+    path: 
+  unityLifecycle:
+    version: 
     nextVersion: 
 - packageId: com.unity.ugui@1.0.0
   testable: 0
@@ -2799,6 +3074,167 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 
     nextVersion: 
+- packageId: com.unity.sysroot@2.0.3
+  testable: 0
+  isDirectDependency: 0
+  version: 2.0.3
+  source: 1
+  resolvedPath: A:\PinguTopia\Library\PackageCache\com.unity.sysroot@2.0.3
+  assetPath: Packages/com.unity.sysroot
+  name: com.unity.sysroot
+  displayName: Sysroot Base
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: This is the base sysroot package required by all sysroot and toolchain
+    packages
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.2
+    - 2.0.3
+    compatible:
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 0.1.16-preview
+    - 0.1.17-preview
+    - 0.1.18-preview
+    - 0.1.19-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.2
+    - 2.0.3
+    verified: 
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - unity
+  - linux
+  - sysroot
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637902310480000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.sysroot.git
+    revision: 66ed41bba76e1f66c4e578e9bad86d33dff8b82b
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+- packageId: com.unity.sysroot.linux-x86_64@2.0.2
+  testable: 0
+  isDirectDependency: 0
+  version: 2.0.2
+  source: 1
+  resolvedPath: A:\PinguTopia\Library\PackageCache\com.unity.sysroot.linux-x86_64@2.0.2
+  assetPath: Packages/com.unity.sysroot.linux-x86_64
+  name: com.unity.sysroot.linux-x86_64
+  displayName: Sysroot Linux x64
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Sysroot used to build unity player for linux x86_64
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    compatible:
+    - 0.1.6-preview
+    - 0.1.7-preview
+    - 0.1.8-preview
+    - 0.1.9-preview
+    - 0.1.10-preview
+    - 0.1.11-preview
+    - 0.1.12-preview
+    - 0.1.13-preview
+    - 0.1.14-preview
+    - 0.1.15-preview
+    - 1.0.0
+    - 2.0.0
+    - 2.0.1
+    - 2.0.2
+    verified: 
+  dependencies:
+  - name: com.unity.sysroot
+    version: 2.0.3
+  resolvedDependencies:
+  - name: com.unity.sysroot
+    version: 2.0.3
+  keywords:
+  - unity
+  - linux
+  - sysroot
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637902310650000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/com.unity.sysroot.git
+    revision: 66ed41bba76e1f66c4e578e9bad86d33dff8b82b
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
 - packageId: com.unity.ext.nunit@1.0.6
   testable: 0
   isDirectDependency: 0
@@ -2858,6 +3294,231 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.0.6
+    nextVersion: 
+- packageId: com.unity.services.core@1.4.2
+  testable: 0
+  isDirectDependency: 0
+  version: 1.4.2
+  source: 1
+  resolvedPath: A:\PinguTopia\Library\PackageCache\com.unity.services.core@1.4.2
+  assetPath: Packages/com.unity.services.core
+  name: com.unity.services.core
+  displayName: Services Core
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: 'This package defines common components used by multiple Game Service
+    packages.
+
+    These are standardized and aim to unify the overall experience
+    of working with Game Services SDK.'
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 1.0.1
+    - 1.1.0-pre.7
+    - 1.1.0-pre.8
+    - 1.1.0-pre.9
+    - 1.1.0-pre.10
+    - 1.1.0-pre.11
+    - 1.1.0-pre.41
+    - 1.1.0-pre.69
+    - 1.2.0
+    - 1.3.1
+    - 1.3.2
+    - 1.4.0
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    compatible:
+    - 1.4.0
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    verified: 1.4.3
+  dependencies:
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.0.2
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.0.2
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637919618520000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+    revision: 3964d1641ebec474aa425853985bccbdb89c2a49
+    path: 
+  unityLifecycle:
+    version: 1.4.0
+    nextVersion: 
+- packageId: com.unity.services.wire@1.1.0
+  testable: 0
+  isDirectDependency: 0
+  version: 1.1.0
+  source: 1
+  resolvedPath: A:\PinguTopia\Library\PackageCache\com.unity.services.wire@1.1.0
+  assetPath: Packages/com.unity.services.wire
+  name: com.unity.services.wire
+  displayName: Wire
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Wire provides notifications in real-time for Unity Gaming Services
+    subscribing to a particular service and listening for messages from that subscription
+    through a websocket connection.
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 1.0.0-preview.20
+    - 1.0.0
+    - 1.1.0
+    - 1.1.1
+    compatible:
+    - 1.0.0-preview.20
+    - 1.0.0
+    - 1.1.0
+    - 1.1.1
+    verified: 
+  dependencies:
+  - name: com.unity.services.core
+    version: 1.4.2
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.0.2
+  - name: com.unity.services.authentication
+    version: 2.1.1
+  resolvedDependencies:
+  - name: com.unity.services.core
+    version: 1.4.2
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.0.2
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  - name: com.unity.services.authentication
+    version: 2.1.1
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637958177420000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+    revision: 8b71940c715822daee8b9b1c6ba770da7fb63f36
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+- packageId: com.unity.nuget.newtonsoft-json@3.0.2
+  testable: 0
+  isDirectDependency: 0
+  version: 3.0.2
+  source: 1
+  resolvedPath: A:\PinguTopia\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2
+  assetPath: Packages/com.unity.nuget.newtonsoft-json
+  name: com.unity.nuget.newtonsoft-json
+  displayName: Newtonsoft Json
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
+    synced to version 13.0.1.
+
+
+    This package is used for advanced json serialization
+    and deserialization. Most Unity users will be better suited using the existing
+    json tools built into Unity.
+
+    To avoid assembly clashes, please use this
+    package if you intend to use Newtonsoft Json.'
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 1.0.0-preview.2
+    - 1.0.0-preview.3
+    - 1.0.0-preview.4
+    - 1.0.1-preview.1
+    - 1.1.2
+    - 2.0.0-preview
+    - 2.0.0-preview.1
+    - 2.0.0-preview.2
+    - 2.0.0
+    - 2.0.1-preview.1
+    - 2.0.2
+    - 3.0.1
+    - 3.0.2
+    compatible:
+    - 3.0.2
+    verified: 3.0.2
+  dependencies: []
+  resolvedDependencies: []
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637846828220000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
+    revision: 8f66870a71ad3f2cdd46330b5c482dfd138ffc64
+    path: 
+  unityLifecycle:
+    version: 3.0.2
     nextVersion: 
 - packageId: com.unity.2d.animation@7.0.5
   testable: 0
@@ -3628,64 +4289,70 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 2.2.2
     nextVersion: 
-- packageId: com.unity.services.core@1.4.0
+- packageId: com.unity.services.authentication@2.1.1
   testable: 0
   isDirectDependency: 0
-  version: 1.4.0
+  version: 2.1.1
   source: 1
-  resolvedPath: A:\PinguTopia\Library\PackageCache\com.unity.services.core@1.4.0
-  assetPath: Packages/com.unity.services.core
-  name: com.unity.services.core
-  displayName: Services Core
+  resolvedPath: A:\PinguTopia\Library\PackageCache\com.unity.services.authentication@2.1.1
+  assetPath: Packages/com.unity.services.authentication
+  name: com.unity.services.authentication
+  displayName: Authentication
   author:
     name: 
     email: 
     url: 
   category: 
   type: 
-  description: 'This package defines common components used by multiple Game Service
-    packages.
+  description: 'Client SDK offering player identity management for Unity Gaming Services.
 
-    These are standardized and aim to unify the overall experience
-    of working with Game Services SDK.'
+
+    Identity
+    providers can be configured from the editor or the Unity Dashboard.
+
+
+    Player
+    management is available in the Unity Dashboard.'
   status: 4
   errors: []
   versions:
     all:
-    - 1.0.1
-    - 1.1.0-pre.7
-    - 1.1.0-pre.8
-    - 1.1.0-pre.9
-    - 1.1.0-pre.10
-    - 1.1.0-pre.11
-    - 1.1.0-pre.41
-    - 1.1.0-pre.69
-    - 1.2.0
-    - 1.3.1
-    - 1.3.2
-    - 1.4.0
-    - 1.4.1
-    - 1.4.2
-    - 1.4.3
+    - 1.0.0-pre.4
+    - 1.0.0-pre.6
+    - 1.0.0-pre.37
+    - 2.0.0
+    - 2.1.1
+    - 2.2.0
+    - 2.3.1
     compatible:
-    - 1.4.0
-    - 1.4.1
-    - 1.4.2
-    - 1.4.3
-    verified: 1.4.3
+    - 2.0.0
+    - 2.1.1
+    - 2.2.0
+    - 2.3.1
+    verified: 2.0.0
   dependencies:
-  - name: com.unity.modules.unitywebrequest
-    version: 1.0.0
   - name: com.unity.nuget.newtonsoft-json
     version: 3.0.2
-  - name: com.unity.modules.androidjni
+  - name: com.unity.services.core
+    version: 1.4.2
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.ugui
     version: 1.0.0
   resolvedDependencies:
-  - name: com.unity.modules.unitywebrequest
-    version: 1.0.0
   - name: com.unity.nuget.newtonsoft-json
     version: 3.0.2
+  - name: com.unity.services.core
+    version: 1.4.2
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
   - name: com.unity.modules.androidjni
+    version: 1.0.0
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
     version: 1.0.0
   keywords: []
   registry:
@@ -3697,16 +4364,16 @@ m_ResolvedPackages:
     capabilities: 7
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637871962570000000
+  datePublishedTicks: 637919619320000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
-    revision: 92e281deb97a96f7b32464b6874de73a17c140ff
+    revision: 9d6737bc9f2d68cd5f2082bd6af2f29284aae057
     path: 
   unityLifecycle:
-    version: 1.4.0
+    version: 2.0.0
     nextVersion: 
 - packageId: com.unity.mathematics@1.2.6
   testable: 0
@@ -3958,74 +4625,6 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 5.0.2
-    nextVersion: 
-- packageId: com.unity.nuget.newtonsoft-json@3.0.2
-  testable: 0
-  isDirectDependency: 0
-  version: 3.0.2
-  source: 1
-  resolvedPath: A:\PinguTopia\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2
-  assetPath: Packages/com.unity.nuget.newtonsoft-json
-  name: com.unity.nuget.newtonsoft-json
-  displayName: Newtonsoft Json
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: 
-  description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
-    synced to version 13.0.1.
-
-
-    This package is used for advanced json serialization
-    and deserialization. Most Unity users will be better suited using the existing
-    json tools built into Unity.
-
-    To avoid assembly clashes, please use this
-    package if you intend to use Newtonsoft Json.'
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 1.0.0-preview.2
-    - 1.0.0-preview.3
-    - 1.0.0-preview.4
-    - 1.0.1-preview.1
-    - 1.1.2
-    - 2.0.0-preview
-    - 2.0.0-preview.1
-    - 2.0.0-preview.2
-    - 2.0.0
-    - 2.0.1-preview.1
-    - 2.0.2
-    - 3.0.1
-    - 3.0.2
-    compatible:
-    - 3.0.2
-    verified: 3.0.2
-  dependencies: []
-  resolvedDependencies: []
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hideInEditor: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637846828220000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
-    revision: 8f66870a71ad3f2cdd46330b5c482dfd138ffc64
-    path: 
-  unityLifecycle:
-    version: 3.0.2
     nextVersion: 
 - packageId: com.unity.burst@1.6.5
   testable: 0

@@ -344,6 +344,7 @@
 -r:"A:/PinguTopia/Library/PackageCache/com.unity.collab-proxy@1.15.17/Lib/Editor/PlasticSCM/unityplastic.dll"
 -r:"A:/PinguTopia/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 -r:"A:/PinguTopia/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
+-r:"A:/PinguTopia/Library/PackageCache/com.unity.services.wire@1.1.0/Plugins/websocket-sharp.dll"
 -r:"A:/PinguTopia/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll"
 -r:"A:/PinguTopia/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll"
 -r:"A:/PinguTopia/Library/PackageCache/com.unity.visualscripting@1.7.8/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll"
@@ -356,11 +357,11 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
-"Library/PackageCache/com.unity.services.core@1.4.0/Editor/Core/Configuration/AssemblyInfo.cs"
-"Library/PackageCache/com.unity.services.core@1.4.0/Editor/Core/Configuration/ConfigurationBuilder.cs"
-"Library/PackageCache/com.unity.services.core@1.4.0/Editor/Core/Configuration/IConfigurationProvider.cs"
-"Library/PackageCache/com.unity.services.core@1.4.0/Editor/Core/Configuration/ProjectConfigurationBuilder.cs"
-"Library/PackageCache/com.unity.services.core@1.4.0/Editor/Core/Configuration/Utils/IoUtils.cs"
+"Library/PackageCache/com.unity.services.core@1.4.2/Editor/Core/Configuration/AssemblyInfo.cs"
+"Library/PackageCache/com.unity.services.core@1.4.2/Editor/Core/Configuration/ConfigurationBuilder.cs"
+"Library/PackageCache/com.unity.services.core@1.4.2/Editor/Core/Configuration/IConfigurationProvider.cs"
+"Library/PackageCache/com.unity.services.core@1.4.2/Editor/Core/Configuration/ProjectConfigurationBuilder.cs"
+"Library/PackageCache/com.unity.services.core@1.4.2/Editor/Core/Configuration/Utils/IoUtils.cs"
 -langversion:9.0
 
 /deterministic
