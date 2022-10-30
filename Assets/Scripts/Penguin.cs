@@ -51,7 +51,7 @@ public class Penguin : MonoBehaviour
         penguinPath = penguinAIPath.GetComponent<PenguinPath>();
         fishBag = 0;
         Notitext = Notibox.GetComponent<TextMeshProUGUI>();
-        InvokeRepeating("HungerTick", 50f, 1f);
+        InvokeRepeating("HungerTick", 1f, 1f);
     }
     
     public Vector3 getPosition(){
