@@ -2,7 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\Assets",
+<<<<<<< HEAD
     "\\Assets\\Scripts"
   ],
+=======
+    "\\Assets\\Scripts",
+    "\\UserSettings"
+  ],
+  "SelectedNode": "\\Assets\\StreamingAssets",
+>>>>>>> H-Branch
   "PreviewInSolutionExplorer": false
 }

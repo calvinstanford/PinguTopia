@@ -748,11 +748,11 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 
+  cloudProjectId: 52e4f45a-7a29-4a5a-ac25-4ddf77b8f676
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: PinguTopia
+  organizationId: hbuscema
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

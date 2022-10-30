@@ -1,0 +1,19 @@
+// This file is generated. Do not modify by hand.
+// XML documentation file not found. To check if public methods have XML comments,
+// make sure the XML doc file is present and located next to the scraped dll
+namespace Unity.XMLDocExample.UnityEditor.SubGroup.YourPackageName
+{
+    public class MyPublicEditorExampleClass
+    {
+        public Unity.XMLDocExample.UnityEditor.SubGroup.YourPackageName.MyPublicEditorExampleClass.MyExampleEnum propertyExample { get; }
+        public MyPublicEditorExampleClass() {}
+        public int CountThingsAndDoStuff(int parameter1, int parameter2, bool parameter3);
+        public enum MyExampleEnum
+        {
+            public const Unity.XMLDocExample.UnityEditor.SubGroup.YourPackageName.MyPublicEditorExampleClass.MyExampleEnum First = 0;
+            public const Unity.XMLDocExample.UnityEditor.SubGroup.YourPackageName.MyPublicEditorExampleClass.MyExampleEnum Second = 1;
+            public const Unity.XMLDocExample.UnityEditor.SubGroup.YourPackageName.MyPublicEditorExampleClass.MyExampleEnum Third = 2;
+            public int value__;
+        }
+    }
+}
