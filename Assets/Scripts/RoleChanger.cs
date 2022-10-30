@@ -4,29 +4,29 @@
 
 // public class RoleChanger : MonoBehaviour
 // {
-//     public Roles norms, hunt, nur;
-//     public SpriteRenderer Rend;
-//     public Sprite sphunt, spnur;
+//     public Penguin selectedPenguin
+//     public bool selectorEnabled;
+//     public Roles hunt,nur;
+
 
 //     // Start is called before the first frame update
 //     void Start()
 //     {
-//         Rend = this.GetComponent<SpriteRenderer>();
+//         selectorEnabled = true;
 //     }
-
 //     // Update is called once per frame
 //     void Update()
 //     {
-//         /*if Button is pressed select penguin*/
-//         if (get)
-//         {
 
-//             if (Roles == hunt)
-//             {
-
-//             }
-//         }
 //     }
 
+//     public void RoleChange()
+//     {
+//         if(selectorEnabled == true)
+//         {
+//             if(Input.GetMouseButtonDown(0)){
+               
+//         }
+//     }
 
 // }

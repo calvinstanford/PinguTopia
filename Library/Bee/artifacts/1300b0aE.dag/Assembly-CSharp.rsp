@@ -393,6 +393,8 @@
 "Assets/Scripts/popup.cs"
 "Assets/Scripts/RandomMovement.cs"
 "Assets/Scripts/RaycastScanner.cs"
+"Assets/Scripts/rcchooserolepopup.cs"
+"Assets/Scripts/rcpopupcontroller.cs"
 "Assets/Scripts/RoleChangeIgloo.cs"
 "Assets/Scripts/RoleChanger.cs"
 "Assets/Scripts/Rolechangerpopup.cs"

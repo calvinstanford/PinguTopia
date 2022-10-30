@@ -22,19 +22,19 @@ public class RoleChangeIgloo : MonoBehaviour
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
                print(hit.collider);
                if (hit.collider != null ){
-                    Debug.Log(hit.collider.name );
+                    Debug.Log( hit.collider.name );
                    
                 if (hit.collider.gameObject.GetComponent<RoleChangeIgloo>()){
-                animator.SetBool("RoleChanger", true);
+                animator.SetBool("openrc", true);
                }
                }  
                 Vector3 mousePosition = Input.mousePosition;
                 print(mousePosition);
 
-                        }
+            }
         
                     }
     public void iglooXButt(){
-       animator.SetBool("RoleChanger", false);
+       animator.SetBool("openrc", false);
     }
 }

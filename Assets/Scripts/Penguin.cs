@@ -41,6 +41,8 @@ public class Penguin : MonoBehaviour
 
     public GameObject scrollView;
     
+    // public Roles pengrole;
+
     void Start()
     {
         stomach = 100;
@@ -90,6 +92,11 @@ void Update(): Stops fishing animation if penguin stops fishing,
 void HungerTick(): Used in InvokeRepeating in the Start function. Controls the stomach, -1 every tick.
                    Controls what happens when stomach is at certain levels.
 */
+
+// public void Roles()
+// {
+
+// }
 
 void HungerTick(){
 
