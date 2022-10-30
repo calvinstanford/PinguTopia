@@ -384,10 +384,7 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/ChangeInput.cs"
 "Assets/NetworkingManager.cs"
-"Assets/RandomMovement.cs"
-"Assets/Scripts/CastleHandler.cs"
 "Assets/Scripts/login.cs"
-"Assets/Scripts/PanZoom.cs"
 "Assets/Scripts/Requests.cs"
 -langversion:9.0
 
