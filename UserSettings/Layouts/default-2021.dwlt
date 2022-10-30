@@ -306,24 +306,24 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 222}
-      m_SelectedIDs: 12660000
-      m_LastClickedID: 26130
-      m_ExpandedIDs: 22fbffff62640000d86400004a650000126600002e660000fe660000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 2afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Hunter_Hut
-        m_OriginalName: Hunter_Hut
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -1248
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 241.6376, y: 327.97678, z: -6.6676297}
     speed: 2
-    m_Value: {x: 265.17166, y: 329.55527, z: -6.4205203}
+    m_Value: {x: 241.6376, y: 327.97678, z: -6.6676297}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 573.8392
     speed: 2
-    m_Value: 549.1284
+    m_Value: 573.8392
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -877,7 +877,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c26b0000
     m_LastClickedID: 27586
-    m_ExpandedIDs: 000000008c6b00008e6b0000
+    m_ExpandedIDs: 00000000da6c0000dc6c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -905,7 +905,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008c6b00008e6b0000
+    m_ExpandedIDs: 00000000da6c0000dc6c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
