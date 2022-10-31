@@ -70,6 +70,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+<<<<<<< HEAD
 
 Library/PackageCache/com.unity.burst@1.6.5/.Runtime/hostmac/lld
 Library/PackageCache/com.unity.burst@1.6.5/.Runtime/hostwin/lld.exe
@@ -80,6 +81,8 @@ Assets/UI Toolkit/rectangle-buttons-with-golden-wooden-water-textures-ui-game-de
 Assets/UI Toolkit/rectangle-buttons-with-golden-wooden-water-textures-ui-game-design-vector-cartoon-set-glossy-labels-from-ice-stone-red-crystal-purple-jelly-isolated-background/2110.w032.n003.142B.p1.142.jpg
 Assets/UI Toolkit/rectangle-buttons-with-golden-wooden-water-textures-ui-game-design-vector-cartoon-set-glossy-labels-from-ice-stone-red-crystal-purple-jelly-isolated-background/2110.w032.n003.142B.p1.142.jpg.meta
 
+=======
+>>>>>>> main-clone-mergetest
 
 Library/PackageCache/com.unity.burst@1.6.5/.Runtime/hostmac/lld
 Library/PackageCache/com.unity.burst@1.6.5/.Runtime/hostwin/lld.exe
