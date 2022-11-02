@@ -416,6 +416,8 @@
 "Assets/Scripts/PointerScript.cs"
 "Assets/Scripts/RandomMovement.cs"
 "Assets/Scripts/RaycastScanner.cs"
+"Assets/Scripts/RcChoosePop.cs"
+"Assets/Scripts/RcPopup.cs"
 "Assets/Scripts/Requests.cs"
 "Assets/Scripts/SelectSystem.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
