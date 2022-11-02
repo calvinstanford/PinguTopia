@@ -49,7 +49,7 @@ public class DeliveryRoom : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 
-                if (hit.collider.name== "Igloo (1)")
+                if (hit.collider.name== "Igloo (2)")
                 {
                     Debug.Log(isBack);
                     BackTrue(true);
